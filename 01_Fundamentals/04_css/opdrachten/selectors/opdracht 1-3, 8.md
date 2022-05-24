@@ -69,36 +69,70 @@ Er zijn verschillende selectors, bijvoorbeeld;
 
 Maak van de bovengenoemde selectors voorbeelden. Geef in je antwoord ook aan wat de voordelen zijn van elke selector.
 
-Een type selector:
+_Een type selector:_
 ```
 h1 {
   color: red;
 }
 ```
-Een voordeel van de type selector is dat je alle elementen van het gegeven type tegelijk kan aanpassen.
+_Een voordeel van de type selector is dat je alle elementen van het gegeven type tegelijk kan aanpassen._
 
 
-Een class selector:
+_Een class selector:_
 ```
 .tigers {
   font-size:18px;
 }
-
-Een voordeel van de class selector is dat één class op meerdere elementen kan worden geplaatst. Zo kan je op verschillende plaatsen in de code dezelfde CSS toepassen zonder dit voor ieder element apart te beschrijven.
-
 ```
-Een ID selector:
+_Een voordeel van de class selector is dat één class op meerdere elementen kan worden geplaatst. Zo kan je op verschillende plaatsen in de code dezelfde CSS toepassen zonder dit voor ieder element apart te beschrijven._
+
+
+_Een ID selector:_
 ```
 #lions {
   background-color: gray;
 }
 ```
-Het voordeel van de ID selector is dat een ID op enkel één element kan worden toegepast. Op deze manier zul je niet onbedoeld dezelfde CSS toepassen op meerdere elementen.
+_Het voordeel van de ID selector is dat een ID op enkel één element kan worden toegepast. Op deze manier zul je niet onbedoeld dezelfde CSS toepassen op meerdere elementen._
 
-Een descendant selector:
+_Een descendant selector:_
 ```
 h1 p {
   color: red;
 }
 ```
-Het voordeel van de descendant selector is dat je de CSS kan toepassen op een element die binnen een andere element zit. Als je bijvoorbeeld een style wil toepassen op alle p tags binnen een h1 element, kan je er op deze manier voor zorgen dat je de style niet wordt toegepast op p tags buiten het h1 element.
+_Het voordeel van de descendant selector is dat je de CSS kan toepassen op een element die binnen een andere element zit. Als je bijvoorbeeld een style wil toepassen op alle p tags binnen een h1 element, kan je er op deze manier voor zorgen dat je de style niet wordt toegepast op p tags buiten het h1 element._
+
+### **Opdracht 8**
+
+Leg in eigen woorden uit wat met cascade en inheritance wordt bedoeld. Maak voorbeelden om je antwoord uit te leggen.
+
+_Cascade gaat over de volgorde van CSS regels. De regel die het laatst in de CSS staat, wordt gebruikt. Bijvoorbeeld:_
+
+```
+div {
+  background-color: green;
+}
+div {
+  background-color: purple;
+}
+```
+
+_In dit geval zal de achtergrondkleur van de div paars worden, omdat deze als laatst in de CSS staat. Higher specificity kan deze volgorde overschrijden, bijvoorbeeld door een class of id aan één van de divs toe te voegen. Daarnaast kan je met !important alles overschrijden._
+
+_Inheritance houdt in dat soms het zetten van een CSS property op een parent element ervoor zorgt dat het ook van toepassing is op alle child elements van deze parent. Als je bijvoorbeeld de font kleur van de body verandert, zullen alle elementen binnen de body deze zelfde font kleur toepassen. In het voorbeeld zouden de tekstkleur van h1 en p allebei bruin zijn omdat hun parent element, body, deze value heeft._
+
+```
+<head>
+<style>
+body {
+  color: brown;
+}
+</style>
+</head>
+
+<body>
+<h1>Deze tekst is bruin</h1>
+<p>Deze tekst is ook bruin</p>
+</body>
+```
