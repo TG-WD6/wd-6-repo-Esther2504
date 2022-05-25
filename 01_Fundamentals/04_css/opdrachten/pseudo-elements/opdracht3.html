@@ -6,15 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 <style>
-    p::after {
-        content: "";
-        background: img("https://static.euronews.com/articles/stories/06/61/63/24/400x225_cmsv2_cf3d457c-7de7-58a7-b389-e9dfb8b75f28-6616324.jpg");
+   
+.content {
+width: 400px;
+}
+.content::before {
+content: url(dogs.jpg);
+position: absolute;
+z-index: -1;
+top: 5px;
+left: 5px;
+right: 5px;
+bottom: 5px;
     }
 </style>
 </head>
 <body>
-    <p>content</p>
+    <div class="content">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
 
-    <img src="https://static.euronews.com/articles/stories/06/61/63/24/400x225_cmsv2_cf3d457c-7de7-58a7-b389-e9dfb8b75f28-6616324.jpg">
 </body>
 </html>
