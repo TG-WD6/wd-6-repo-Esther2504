@@ -9,4 +9,4 @@
 2.	Ik ben niet tevreden over hoe ik het deed als scrum master.
 
 ## Actiepunten voor volgende week
-* Minder focussen op hoever anderen zijn in vergelijking met mijzelf.
+* Minder focussen op hoe ver anderen zijn in vergelijking met mijzelf.
