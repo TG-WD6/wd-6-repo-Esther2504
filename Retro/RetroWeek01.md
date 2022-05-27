@@ -5,7 +5,7 @@
 2.	Ik ben blij met wat ik geleerd heb over git deze week. In het begin begreep ik er haast niks van en een paar dagen later snapte ik het vrij goed.
 
 ## Wat ging er minder goed
-1.	Bij het samenwerken vroeg ik voor mijn gevoel niet vaak genoeg hoe het gaat bij de rest en niet genoeg hulp aangeboden.
+1.	Bij het samenwerken vroeg ik voor mijn gevoel niet vaak genoeg hoe het gaat bij de rest en heb ik niet genoeg hulp aangeboden.
 2.	Het duurde vrij lang voordat ik wat van git begon te begrijpen.
 
 ## Actiepunten voor volgende week
