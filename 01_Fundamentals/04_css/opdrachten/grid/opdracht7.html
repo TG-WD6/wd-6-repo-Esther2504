@@ -14,9 +14,10 @@
 
     .grid {
         display: grid;
-        grid-template-columns: 1fr 3fr;
+        grid-template-columns: minmax(10px, 400px) 2fr;
         grid-template-rows: repeat(2, 1fr);
         height: 600px;
+        grid-gap: 10px;
     }
 
     .sidebar, .article1, .article2 {
