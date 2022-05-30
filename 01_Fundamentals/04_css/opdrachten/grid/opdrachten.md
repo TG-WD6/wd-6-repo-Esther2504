@@ -12,6 +12,6 @@ _Fr staat voor fractional unit. Het is handig om te gebruiken bij grids omdat de
 ### **Opdracht 6**
 Wat is het verschil tussen justify/align/place-items en justify/align/place-content?
 
-_-content bepaalt hoe de elementen worden geplaatst over de ?????? LATER OPNIEUW ONDERZOEKEN_
+_Justify/align/place-content werkt alleen als de flex-wrap de value 'wrap' heeft en er meerdere lines in de container zijn. Het bepaalt de positie van de lines relatief van de andere lines. Justify/align/place-items heeft alleen invloed op een individuele line._
 
 
