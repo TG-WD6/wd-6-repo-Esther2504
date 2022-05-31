@@ -8,8 +8,9 @@
     <style>
         .container {
     border: 2px solid black;
-    width: 800px;
+    width: 400px;
     background-color: rgb(234, 234, 234);
+    height: 200px;
 }
 
 .chicken {
@@ -19,14 +20,37 @@
     position: relative;
 }
 
-.pink::before {
-  content: "";
+.pink {
+  
   position: absolute;
   width: 100px;
   height: 100px;
   background: pink;
   left: 15px;
   top: 15px;
+  transition: 1s;  
+  /* transition-timing-function: ease-out; */
+}
+
+.red {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: rgb(243, 3, 3, 0.0);
+  left: 15px;
+  top: 15px;
+  transition: background-color 3s;  
+  transition-timing-function: ease-in;
+}
+
+.container:hover .red { 
+    background-color: rgb(243, 3, 3, 0.5);
+}
+
+.container:hover .pink { 
+    transform: rotate(45deg);
+    left: 75px;
+    top: 75px;
 }
 
     </style>
@@ -34,6 +58,7 @@
 <body>
     <div class="container">
 <img class="chicken" src="chicken.jpg">
+<div class="red"></div>
 <div class="pink"></div>
     </div>
 </body>
