@@ -1,0 +1,27 @@
+.button {
+  background-color: greenyellow;
+  color: white;
+  width: 200px;
+  height: 50px;
+  border: 2px solid #0debe4;
+  border-style: double;
+  font-size: 20px;
+}
+
+.button:hover {
+  background-color: white;
+  color: greenyellow;
+}
+
+.colorChangingSquare {
+  background-color: purple;
+  width: 200px;
+  height: 200px;
+  -webkit-transition: 4s;
+  transition: 4s;
+}
+
+.colorChangingSquare:hover {
+  background-color: blue;
+}
+/*# sourceMappingURL=style.css.map */

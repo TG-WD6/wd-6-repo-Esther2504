@@ -1,0 +1,34 @@
+@mixin button-style {
+    background-color: greenyellow;
+    color: white;
+    width: 200px;
+    height: 50px;
+    border: 2px solid rgb(13, 235, 228);
+    border-style: double;
+    font-size: 20px;
+    
+    &:hover {
+    background-color: white;
+    color: greenyellow;  
+    }
+  }
+
+  .button {
+    @include button-style();
+  }
+  
+  @mixin div-transition {
+    background-color: purple;
+    width: 200px;
+    height: 200px;
+    transition: 4s;  
+    
+    &:hover {
+    background-color: blue;
+    }
+  }
+
+  .colorChangingSquare {
+    @include div-transition();
+  }
+  
