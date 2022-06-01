@@ -1,0 +1,18 @@
+nav {
+  background-color: #2F125F;
+  color: white;
+  height: 50px;
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+/*# sourceMappingURL=style.css.map */
