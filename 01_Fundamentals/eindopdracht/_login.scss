@@ -1,0 +1,45 @@
+.login-card {
+    text-align: center;
+    border: 1px solid $primary-color;
+    width: 300px;
+    align-items: center;
+    margin: auto;
+    padding: 10px;
+    margin-top: 30px;
+
+    .input-info {
+        border: none;
+        width: 280px;
+        border-bottom: 1px solid black;
+        margin: 10px;
+        font-size: 15px;
+    }
+
+    a {
+        margin-left: 25px;
+        color: blue;
+        text-decoration: none;
+    }
+
+    p {
+        margin: 5px;
+    }
+}
+
+button {
+    background-color: $button-color;
+    color: $text-color;
+    width: 280px;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.photo {
+margin: auto;
+width: 200px;
+height: 200px;
+background-color: rgb(213, 208, 208);
+border-radius: 15%;
+}
