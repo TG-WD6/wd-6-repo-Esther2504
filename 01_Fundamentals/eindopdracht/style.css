@@ -1,18 +1,19 @@
 nav {
   background-color: #2F125F;
   color: white;
-  height: 50px;
   width: 100%;
-}
-
-nav ul {
-  list-style: none;
+  overflow: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+nav li {
+  display: inline-block;
+  padding: 10px;
+  font-size: 20px;
 }
 /*# sourceMappingURL=style.css.map */
