@@ -1,16 +1,12 @@
 .product-cards {
-    border: 1px solid black;
+    // border: 1px solid black;
     width: 70%;
     margin: auto;
 }
 
 .card {
     display: grid;
-    // flex-direction: row;
-    // margin: 20px;
-    // padding: 10px;
-    grid-template-columns: 18% 60% 20%;
-    // height: 600px;
+    grid-template-columns: 18% autofill 20%;
     grid-template-areas:
     "photo text order"
 }
@@ -60,4 +56,16 @@
     content: "99";
     font-size: 15px;
     align-self:flex-start;
+}
+
+@media (max-width:$max-width) {
+    .card {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        align-items: center;
+        height: 100%;
+        margin: auto;
+    }
 }

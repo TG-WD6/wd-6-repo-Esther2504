@@ -3,7 +3,6 @@ footer {
     background-color: rgb(245, 245, 220);
     color: gray;
     display: flex;
-    align-content: flex-start;
 
     div {
         margin: 30px 150px 20px 40px;
@@ -20,8 +19,34 @@ footer {
     }
 }
 
-
+.info {
+    display: flex;
+    align-self: flex-start;
+}
 
 .social-media {
-    margin-left: auto;
+    justify-self: flex-end;
+}
+
+@media (max-width:$max-width) {
+footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    align-items: center;
+    height: 100%;
+    margin: auto;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    align-items: center;
+    height: 100%;
+    margin: auto;
+}
+
 }

@@ -119,7 +119,6 @@
 
 .login-card {
   text-align: center;
-  border: 1px solid #2F125F;
   width: 300px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -166,7 +165,6 @@ button {
 }
 
 .product-cards {
-  border: 1px solid black;
   width: 70%;
   margin: auto;
 }
@@ -174,8 +172,8 @@ button {
 .card {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 18% 60% 20%;
-      grid-template-columns: 18% 60% 20%;
+  -ms-grid-columns: 18% autofill 20%;
+      grid-template-columns: 18% autofill 20%;
       grid-template-areas: "photo text order";
 }
 
@@ -239,6 +237,25 @@ button {
       align-self: flex-start;
 }
 
+@media (max-width: 768px) {
+  .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+    margin: auto;
+  }
+}
+
 footer {
   width: 100%;
   background-color: beige;
@@ -246,8 +263,6 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-line-pack: start;
-      align-content: flex-start;
 }
 
 footer div {
@@ -264,8 +279,51 @@ footer p:first-child {
   color: black;
 }
 
+.info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
 .social-media {
-  margin-left: auto;
+  justify-self: flex-end;
+}
+
+@media (max-width: 768px) {
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+    margin: auto;
+  }
+  .info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+    margin: auto;
+  }
 }
 
 body {
