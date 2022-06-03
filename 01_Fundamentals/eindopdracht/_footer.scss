@@ -1,0 +1,25 @@
+footer {
+    width: 100%;
+    background-color: rgb(245, 245, 220);
+    color: gray;
+    display: flex;
+    align-content: flex-start;
+
+    div {
+        margin: 30px 150px 20px 40px;
+    }
+
+    img {
+        width: 30px;
+        margin: 5px;
+    }
+}
+
+p:first-child {
+    font-weight: bold;
+    color: black;
+}
+
+.social-media {
+    margin-left: auto;
+}
