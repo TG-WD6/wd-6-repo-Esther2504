@@ -157,12 +157,86 @@ button {
   font-size: 18px;
 }
 
-.photo {
+.login-photo {
   margin: auto;
   width: 200px;
   height: 200px;
   background-color: #d5d0d0;
   border-radius: 15%;
+}
+
+.product-cards {
+  border: 1px solid black;
+  width: 70%;
+  margin: auto;
+}
+
+.card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 18% 60% 20%;
+      grid-template-columns: 18% 60% 20%;
+      grid-template-areas: "photo text order";
+}
+
+.card-photo {
+  margin: 10px;
+  width: 165px;
+  height: 165px;
+  background-color: #d5d0d0;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: photo;
+}
+
+.card-text {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: text;
+  padding-top: 15px;
+}
+
+.card-text p:nth-child(2) {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.card-order {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: order;
+  padding-top: 15px;
+}
+
+.card-order .price {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: red;
+}
+
+.card-order p {
+  color: green;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.card-order img {
+  width: 75px;
+}
+
+.price:after {
+  content: "99";
+  font-size: 15px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 footer {
@@ -185,7 +259,7 @@ footer img {
   margin: 5px;
 }
 
-p:first-child {
+footer p:first-child {
   font-weight: bold;
   color: black;
 }

@@ -13,12 +13,14 @@ footer {
         width: 30px;
         margin: 5px;
     }
+
+    p:first-child {
+        font-weight: bold;
+        color: black;
+    }
 }
 
-p:first-child {
-    font-weight: bold;
-    color: black;
-}
+
 
 .social-media {
     margin-left: auto;
