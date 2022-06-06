@@ -48,7 +48,6 @@ div {
 </body>
 ```
 
-<br>
 ### **Opdracht 6**
 Als je ruimte wilt maken tussen de border en buiten de box, welke css property gebruik je dan? Maak een voorbeeld in je antwoord.
 
