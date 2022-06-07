@@ -22,19 +22,37 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  justify-items: flex-end;
 }
 
 .nav-items ul li {
-  display: inline-block;
+  list-style: none;
   text-align: center;
   padding: 8px 50px 8px 50px;
   font-size: 18px;
 }
 
 .nav-items img {
+  width: 20px;
+}
+
+.menu-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.menu-items ul li {
+  display: inline-block;
+  text-align: center;
+  padding: 8px 50px 8px 50px;
+  font-size: 18px;
+}
+
+.menu-items img {
   width: 20px;
 }
 
@@ -122,6 +140,9 @@ body {
     width: 50px;
     opacity: 0;
   }
+  .menu-items {
+    display: none;
+  }
   .nav-items {
     display: none;
   }
@@ -138,10 +159,21 @@ body {
     -webkit-transform: rotate(315deg);
             transform: rotate(315deg);
   }
+  .navbar input:checked ~ .items-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    right: 10px;
+  }
   .navbar input:checked ~ .nav-items {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 
