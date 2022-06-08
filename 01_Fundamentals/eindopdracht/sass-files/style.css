@@ -99,6 +99,9 @@ ul img {
     transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
   }
   .nav-menu {
+    display: none;
+  }
+  .navbar input:checked .nav-menu {
     position: fixed;
     right: -100%;
     top: 80px;
@@ -111,18 +114,11 @@ ul img {
     background-color: #2F125F;
     width: 100%;
     text-align: left;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
-  }
-  .nav-menu .nav-item {
-    -webkit-transform: translatex(0);
-            transform: translatex(0);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
   }
   .nav-item {
     margin: 16px auto;
-  }
-  .nav-item:hover {
-    left: 10px;
   }
   .nav-menu.active {
     right: 0;
@@ -334,11 +330,10 @@ footer p:first-child {
         -ms-flex-align: center;
             align-items: center;
     height: 100%;
-    margin: auto;
+    margin-left: 60px;
   }
   .social-media {
-    -ms-grid-column-align: center;
-        justify-self: center;
+    margin-left: 90px;
   }
 }
 /*# sourceMappingURL=style.css.map */
