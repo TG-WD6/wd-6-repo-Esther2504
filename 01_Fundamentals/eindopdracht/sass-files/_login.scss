@@ -1,11 +1,18 @@
 .login-card {
     text-align: center;
-    // border: 1px solid $primary-color;
     width: 300px;
     align-items: center;
     margin: auto;
     padding: 10px;
     margin-top: 30px;
+
+    .login-photo {
+        margin: auto;
+        width: 200px;
+        height: 200px;
+        background-color: rgb(213, 208, 208);
+        border-radius: 15%;
+    }
 
     .input-info {
         border: none;
@@ -28,7 +35,7 @@
 
 button {
     background-color: $button-color;
-    color: $text-color;
+    color: white;
     width: 280px;
     border: none;
     padding: 10px;
@@ -36,10 +43,3 @@ button {
     font-size: 18px;
 }
 
-.login-photo {
-margin: auto;
-width: 200px;
-height: 200px;
-background-color: rgb(213, 208, 208);
-border-radius: 15%;
-}

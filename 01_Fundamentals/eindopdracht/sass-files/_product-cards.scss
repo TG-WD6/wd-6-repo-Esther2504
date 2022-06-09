@@ -1,7 +1,7 @@
 .product-cards {
-    // border: 1px solid black;
     width: 70%;
     margin: auto;
+
 }
 
 .card {
@@ -40,6 +40,12 @@
     font-size: 20px;
     font-weight: bold;
     color: red;
+
+    &:after {
+        content: "99";
+        font-size: 15px;
+        align-self:flex-start;
+    }
         }
    
     p {
@@ -52,11 +58,8 @@
     }
     }
 
-.price:after {
-    content: "99";
-    font-size: 15px;
-    align-self:flex-start;
-}
+
+// MEDIA QUERY
 
 @media (max-width:$max-width) {
     .card {

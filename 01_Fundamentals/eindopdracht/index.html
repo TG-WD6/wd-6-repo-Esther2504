@@ -10,39 +10,22 @@
 
 </head>
 <body>
-
-    <div class="navigation">
-        <nav class="navbar">
-            <div class="logo"><img src="images\TG-logo.png" alt="Techgrounds logo" width="180px"></div>
-            <ul class="nav-menu">
-            <li class="nav-item-transition">
-                <a href="#" class="nav-link"><img src="images\home.svg">&nbsp;Home</a>
-            </li>
-            <li class="nav-item-transition">
-                <a href="#" class="nav-link"><img src="images\popular.svg">&nbsp;Popular</a>
-            </li>
-            <li class="nav-item-transition">
-                <a href="#" class="nav-link"><img src="images\contact.svg">&nbsp;Contact</a>
-            </li>
-            <li class="nav-item">
-                
-            </li>
-        </ul>
-    
-        <div class="hamburger">
-            <span class="hamburger-bar"></span>
-            <span class="hamburger-bar"></span>
-            <span class="hamburger-bar"></span>
-        </div>
+    <div class="nav-container">
+        <nav class="main-nav">
+          <input type="checkbox" id="toggle" />
+          <label for="toggle" class="hamburger">
+            <i></i>
+          </label>
+          <a href="index.html" class="logo"><img src="images\TG-logo.png" alt="Techgrounds logo" width="250px"></a>
+          <ul class="nav-links">
+            <li><a href="#"><img src="images\home.svg">&nbsp;Home</a></li>
+            <li><a href="#"><img src="images\popular.svg">&nbsp;Popular</a></li>
+            <li><a href="#"><img src="images\contact.svg">&nbsp;Contact</a></li>
+          </ul>
         </nav>
-    </div>
-    
-    <script src="script.js"></script>
-    
-    <div class="nav-space"></div> 
+      </div>
 
-
-
+      <div class="nav-space"></div>
 
 <div class="login-card">
     <div class="login-photo"></div>
@@ -65,7 +48,7 @@
         </div> 
         <div class="card-order">
             <span class="price">99,</span>
-            <p>Voor 23:59 besteld, morgen in huis</p><br>
+            <p>Voor 23:59 besteld, morgen in huis</p>
             <img src="images/shopping-cart.PNG">
         </div>
     </div>
@@ -78,7 +61,7 @@
         </div>
         <div class="card-order">
             <span class="price">99,</span>
-            <p>Voor 23:59 besteld, morgen in huis</p><br>
+            <p>Voor 23:59 besteld, morgen in huis</p>
             <img src="images/shopping-cart.PNG">
         </div>
     </div>
@@ -91,15 +74,15 @@
     </div>
     <div class="card-order">
         <span class="price">99,</span>
-        <p>Voor 23:59 besteld, morgen in huis</p><br>
+        <p>Voor 23:59 besteld, morgen in huis</p>
         <img src="images/shopping-cart.PNG">
     </div>
     </div>
 </div>
 <br>
-<footer>
+<footer class="footer">
     <div class="info">
-    <div class=".klantenservice">
+    <div class="klantenservice">
     <p>Klantenservice</p>
     <p>Contact opnemen</p>
     <p>Bestellen & Leveren</p>
@@ -107,7 +90,7 @@
     <p>Retourneren</p>
     <p>Garantie & Reparatie</p>
     </div>
-    <div class=".winkels">
+    <div class="winkels">
     <p>Winkels</p>
     <p>Almere</p>
     <p>Amstelveen</p>
@@ -119,7 +102,7 @@
     <p>Rotterdam</p>
     <p>Utrecht</p>
     </div>
-    <div class=".ontdek">
+    <div class="ontdek">
     <p>Ontdek</p>
     <p>Inspiratie</p>
     <p>Merken</p>
