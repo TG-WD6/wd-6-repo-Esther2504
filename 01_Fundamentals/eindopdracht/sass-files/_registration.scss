@@ -1,0 +1,48 @@
+.registratie-form {
+    text-align: left;
+    max-width: 360px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    h2 {
+        margin: 0;
+    }
+
+    .input-info {
+        border: none;
+        width: 350px;
+        border-bottom: 1px solid black;
+        margin: 10px;
+        font-size: 15px;
+        margin-top: 10px;
+        margin-left: 0;
+    }
+
+    .address {
+        display: flex;
+        flex-direction: row;
+        
+        .input-info {
+        width: 125px;
+        }
+
+        .input-info:last-child {
+            width: 75px;
+            }
+    }
+
+    .register-button {
+        background-color: $button-color;
+        color: white;
+        width: 150px;
+        padding: 10px;
+        font-weight: bold;
+        font-size: 18px;
+        border: 2px solid $button-color;
+        border-radius: 10%;
+        margin-top: 10px;
+        margin-left: auto;
+    }
+}

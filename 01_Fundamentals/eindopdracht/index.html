@@ -12,7 +12,7 @@
 <body>
     <div class="nav-container">
         <nav class="main-nav">
-          <input type="checkbox" id="toggle" />
+          <input type="checkbox" id="toggle">
           <label for="toggle" class="hamburger">
             <i></i>
           </label>
@@ -31,11 +31,11 @@
     <div class="login-photo"></div>
     <p style="font-size:20px; font-weight: bold;">Login</p>
     <p style="color:gray;">Login with Your Email</p><br>
-    <input class="input-info" type="text" placeholder="Email"><br>
-    <input class="input-info" type="text" placeholder="Password"><br><br>
+    <input class="input-info" type="text" placeholder="Email" required><br>
+    <input class="input-info" type="text" placeholder="Password" required><br><br>
     <input type="checkbox"><span style="color:rgb(71, 71, 71);">&nbsp;Remember me</span> 
     <a href="">Forgot password?</a><br><br>
-    <button><img style="width: 15px;" src="images\login.svg">&nbsp;LOGIN</button>
+    <button class="login-button"><img style="width: 15px;" src="images\login.svg">&nbsp;LOGIN</button>
 </div><br>
 
 <div class="product-cards">
@@ -44,7 +44,8 @@
         <div class="card-text">
             <p>techgrounds</p>
             <p>techgrounds title</p>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
         </div> 
         <div class="card-order">
             <span class="price">99,</span>
@@ -57,7 +58,8 @@
         <div class="card-text">
             <p>techgrounds</p>
             <p>techgrounds title</p>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
         </div>
         <div class="card-order">
             <span class="price">99,</span>
@@ -70,7 +72,8 @@
         <div class="card-text">
         <p>techgrounds</p>
         <p>techgrounds title</p>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
     </div>
     <div class="card-order">
         <span class="price">99,</span>
@@ -79,6 +82,30 @@
     </div>
     </div>
 </div>
+<br><br>
+<form class="registratie-form">
+    <h2>Nieuw hier?</h2>
+    <p>Maak hier een nieuw account aan.</p>
+    <input class="input-info" type="text" placeholder="Voornaam"><br>
+    <input class="input-info" type="text" placeholder="Achternaam"><br>
+    <div class="address"><input class="input-info" type="text" placeholder="Postcode">
+    <input class="input-info" type="number" placeholder="Huisnummer">
+    <input class="input-info" type="text" placeholder="Toev.">
+</div>
+    <br>
+    <input class="input-info" type="text" placeholder="Email"><br>
+    <input class="input-info" type="text" placeholder="Password"><br>
+    <input class="input-info" type="number" placeholder="Telefoonnummer"><br>
+
+    <button class="register-button">Registreer</button>
+</form>
+
+<br>
+<!-- <div class="image-overlay">
+<img src="images/dog.jpg" width="500px">
+
+</div> -->
+
 <br>
 <footer class="footer">
     <div class="info">
