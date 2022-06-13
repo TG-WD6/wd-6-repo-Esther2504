@@ -95,3 +95,56 @@ greeting += " Esther"
 
 7. _Doe hetzelfde voor "-=", "*=", "/=", "%=" en "**="._
 Dit werkt hetzelfde als de '+=', alleen worden de values hierbij afgetrokken (-=), vermenigvuldigd (*=), gedeeld (/=) en wordt de overgebleven waarde teruggekeerd (%=). De **== staat voor tot de macht.
+
+<br>
+
+### **Opdracht 2.1**
+1. _Splits de String met een string method op in 2 aparte zinnen. Stop beiden in een aparte variabele._
+```
+let someKittens = "De poes van de buurman heeft kittens gehad! Hij vraagt of wij nog kittens willen.";
+let poesBuurman = someKittens.slice(0,43);
+let kittensVraag = someKittens.slice(44,81);
+```
+
+2. _Zo’n geweldig nieuws verdient upper case. Zet someKittens om naar hoofdletters._
+```
+console.log(someKittens.toUpperCase())
+```
+
+3. _Geef de eerste en laatste index van het woord “kittens” in de variabele someKittens._
+4. _Gebruik charAt() op beiden. Welk teken krijg je terug?_
+```
+console.log(someKittens.charAt(29));
+console.log(someKittens.charAt(35));
+```
+De tekens 'k' en 's'.
+
+<br>
+
+### **Opdracht 2.2**
+_substring() en slice() lijken erg op elkaar. We onderzoeken de verschillen. Test dit met een eigen string, of gebruik het vorige voorbeeld. substring() en slice() kunnen 2 waardes meegegeven worden - een index waar de nieuwe waarde begint en een index waar deze moet eindigen._
+
+1. _Wat doet substring() als het eerste getal hoger is dan het tweede getal?_
+Substring geeft de tekens die tussen deze getallen staan terug, ondanks de volgorde van de getallen.
+
+2. _Wat doet slice() als het eerste getal hoger is dan het tweede getal?_
+Er wordt niets teruggegeven.
+
+_Deze waardes hoeven niet per se positief te zijn - je kan ook negatieve getallen meegeven._
+
+3. _Wat doet substring() bij negatieve waardes?_
+Substring ziet negatieve waardes als '0', oftewel het eerste teken van de string.
+
+4. _Wat doet slice() bij negatieve waardes?_
+Slice telt bij een negatieve waarde terug vanaf het einde van de string.
+
+<br>
+
+### **Opdracht 2.3**
+_Gebruik split() om alle woorden apart in een Array te zetten._
+
+```
+let someKittens = "Die nieuwe kittens zijn zo schattig!";
+let anArray = someKittens.split(" ");
+console.log(anArray);
+```
