@@ -8,16 +8,11 @@ footer {
         margin: 30px 150px 20px 40px;
     }
 
-    img {
-        width: 30px;
-        margin: 5px;
-    }
-
-    p:first-child {
+        p:first-child {
         font-weight: bold;
         color: black;
     }
-}
+
 
 .info {
     display: flex;
@@ -25,11 +20,20 @@ footer {
 }
 
 .social-media {
-    justify-self: flex-end;
+        justify-self: flex-end;
+
+    img {
+        width: 30px;
+        margin: 5px;
+    }
 }
+
+}
+
+// MEDIA QUERY
 
 @media (max-width:$max-width) {
-footer {
+.footer {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -37,16 +41,16 @@ footer {
     align-items: center;
     height: 100%;
     margin: auto;
-}
+
 
 .info {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    width: 100%;
-    align-items: center;
-    height: 100%;
+    @extend .footer;
+    margin-left: 60px;
+}
+
+.social-media {
     margin: auto;
 }
 
+}
 }

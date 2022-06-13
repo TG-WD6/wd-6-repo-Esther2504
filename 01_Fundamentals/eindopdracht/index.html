@@ -5,38 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Techgrounds Challenge</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sass-files/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <div class="navbar">
-        <div class="logo">
-            <img src="TG-logo.png" alt="Techgrounds logo" width="200px">
-    </div>
-    <input class="hamburger-menu" type="checkbox">
-    <label class='hamburger-container' for="hamburger-menu">
-    
-    <div class="hamburger"></div>
-</label>
-    <nav class="nav-items">
-<ul>
-    <li><img src="images\home.svg">&nbsp;&nbsp;Home</li>
-    <li><img src="images\popular.svg">&nbsp;&nbsp;Popular</li>
-    <li><img src="images\contact.svg">&nbsp;&nbsp;Contact</li>
-</ul>
-    </nav>
+    <div class="nav-container">
+        <nav class="main-nav">
+          <input type="checkbox" id="toggle">
+          <label for="toggle" class="hamburger">
+            <i></i>
+          </label>
+          <a href="index.html" class="logo"><img src="images\TG-logo.png" alt="Techgrounds logo" width="250px"></a>
+          <ul class="nav-links">
+            <li><a href="#"><img src="images\home.svg">&nbsp;Home</a></li>
+            <li><a href="#"><img src="images\popular.svg">&nbsp;Popular</a></li>
+            <li><a href="#"><img src="images\contact.svg">&nbsp;Contact</a></li>
+          </ul>
+        </nav>
+      </div>
 
-</div>
+      <div class="nav-space"></div>
 
 <div class="login-card">
     <div class="login-photo"></div>
     <p style="font-size:20px; font-weight: bold;">Login</p>
     <p style="color:gray;">Login with Your Email</p><br>
-    <input class="input-info" type="text" placeholder="Email"><br>
-    <input class="input-info" type="text" placeholder="Password"><br><br>
-    <input type="checkbox"><span style="color:rgb(71, 71, 71);">Remember me</span> 
+    <input class="input-info" type="text" placeholder="Email" required><br>
+    <input class="input-info" type="text" placeholder="Password" required><br><br>
+    <input type="checkbox"><span style="color:rgb(71, 71, 71);">&nbsp;Remember me</span> 
     <a href="">Forgot password?</a><br><br>
-    <button><img style="width: 15px;" src="images\login.svg">&nbsp;LOGIN</button>
+    <button class="login-button"><img style="width: 15px;" src="images\login.svg">&nbsp;LOGIN</button>
 </div><br>
 
 <div class="product-cards">
@@ -45,7 +44,8 @@
         <div class="card-text">
             <p>techgrounds</p>
             <p>techgrounds title</p>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
         </div> 
         <div class="card-order">
             <span class="price">99,</span>
@@ -58,7 +58,8 @@
         <div class="card-text">
             <p>techgrounds</p>
             <p>techgrounds title</p>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
         </div>
         <div class="card-order">
             <span class="price">99,</span>
@@ -71,7 +72,8 @@
         <div class="card-text">
         <p>techgrounds</p>
         <p>techgrounds title</p>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
     </div>
     <div class="card-order">
         <span class="price">99,</span>
@@ -80,10 +82,34 @@
     </div>
     </div>
 </div>
+<br><br>
+<form class="registratie-form">
+    <h2>Nieuw hier?</h2>
+    <p>Maak hier een nieuw account aan.</p>
+    <input class="input-info" type="text" placeholder="Voornaam"><br>
+    <input class="input-info" type="text" placeholder="Achternaam"><br>
+    <div class="address"><input class="input-info" type="text" placeholder="Postcode">
+    <input class="input-info" type="number" placeholder="Huisnummer">
+    <input class="input-info" type="text" placeholder="Toev.">
+</div>
+    <br>
+    <input class="input-info" type="text" placeholder="Email"><br>
+    <input class="input-info" type="text" placeholder="Password"><br>
+    <input class="input-info" type="number" placeholder="Telefoonnummer"><br>
+
+    <button class="register-button">Registreer</button>
+</form>
+
 <br>
-<footer>
+<!-- <div class="image-overlay">
+<img src="images/dog.jpg" width="500px">
+
+</div> -->
+
+<br>
+<footer class="footer">
     <div class="info">
-    <div class=".klantenservice">
+    <div class="klantenservice">
     <p>Klantenservice</p>
     <p>Contact opnemen</p>
     <p>Bestellen & Leveren</p>
@@ -91,7 +117,7 @@
     <p>Retourneren</p>
     <p>Garantie & Reparatie</p>
     </div>
-    <div class=".winkels">
+    <div class="winkels">
     <p>Winkels</p>
     <p>Almere</p>
     <p>Amstelveen</p>
@@ -103,7 +129,7 @@
     <p>Rotterdam</p>
     <p>Utrecht</p>
     </div>
-    <div class=".ontdek">
+    <div class="ontdek">
     <p>Ontdek</p>
     <p>Inspiratie</p>
     <p>Merken</p>
