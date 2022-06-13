@@ -148,3 +148,93 @@ let someKittens = "Die nieuwe kittens zijn zo schattig!";
 let anArray = someKittens.split(" ");
 console.log(anArray);
 ```
+
+<br>
+
+### **Opdracht 3.1**
+1. _Wat is het verschil tussen == en ===?_
+De == controleert alleen of de values overeenkomen, terwijl de === controleert of beide de datatypes en values hetzelfde zijn.
+
+2. _Wat is het verschil tussen > en >=? En tussen < en <=?_
+Het verschil is dat terwijl de > kijkt of de eerste value groter is dan de andere value, => kijkt of de value groter OF gelijk is aan de andere value. Bijvoorbeeld, met de > is een 8 niet groter dan 8:
+
+```
+let numberEight = 8;
+if (numberEight > 8) {
+    console.log("That's false!")
+}
+```
+Maar een 8 is wel gelijk aan 8, waardoor het met een => wel waar is:
+```
+let numberEight = 8;
+if (numberEight => 8) {
+    console.log("That's true!")
+}
+```
+Ditzelfde geldt voor < en <=, alleen wordt hier gekeken of de eerste value kleiner is dan de andere value.
+
+3. _Schrijf de If conditie zo, dat je alleen “Result!” ziet als x==4 en y==8_
+```
+let x = 4;
+let y = 8;
+if (x == 4 && y==8) {
+    console.log("Result!");
+}
+```
+
+4. _Schrijf het nu zo dat je alleen “Result!” ziet als x==4 OF y==8_
+```
+let x = 4;
+let y = 8;
+if (x == 4 || y==8) {
+    
+} else {
+console.log("Result!");
+}
+```
+
+5. _Zet nu de console.log(“Results”) in een Else { } na de If. Kan je de conditie omdraaien zodat je alsnog “Results!” te zien krijgt?_
+```
+let x = 4;
+let y = 8;
+if (!(x == 4 || y==8)) {
+    
+} else {
+console.log("Result!");
+}
+```
+
+6. _Kan je het vorige antwoord ook geven zonder || te gebruiken?_
+```
+let x = 4;
+let y = 8;
+if (!(x == 4 && y==8)) {
+    
+} else {
+console.log("Result!");
+}
+```
+
+_Schrijf voor de volgende opdrachten 1 If/Else die 1 variabele waarde controleert, en zorg voor het volgende:_
+
+7. _Log het in je console als de waarde groter dan 5 EN kleiner dan 10 is._
+8. _Zo niet, log dan in je console als de waarde 11 of groter EN 20 of kleiner is._
+9. _Zo niet, log dan in je console als de waarde 21 of 23 is._
+10. _Zo niet, log dan in je console als de waarde kleiner dan 35 OF tussen de 40 en 45 is._
+11. _Test of je bij alle uitkomsten kan komen. Verandert er iets als je alle If/Else omzet in aparte If blokken?_
+
+```
+let x = 34;
+
+if ((x > 5) && (x < 10)) {
+console.log("De waarde is tussen 5 en 10");
+} else if ((x => 11) && (x <= 20)) {
+console.log("De waarde is tussen 11 en 20");
+} else if ((x == 21) || (x == 23)) {
+console.log("De waarde is 21 of 23");
+} else if ((x < 35) || ((x > 40) && (x < 45))) {
+console.log("De waarde is onder 35 of tussen 40 en 45");
+}
+```
+
+Bij het plaatsen van de if/else in aparte if blokken worden er verschillende uitkomsten gelogd. Als de waarde bijvoorbeeld '8' is, wordt niet alleen "De waarde is tussen 5 en 10" gelogd, maar ook "De waarde is onder 35 of tussen 40 en 45", omdat de waarde onder de 35 is en de condition 'if ((x > 5) && (x < 10))' niet ziet.

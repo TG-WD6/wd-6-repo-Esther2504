@@ -70,7 +70,65 @@ console.log(testString.substring(3,-1));
 console.log(testString.slice(3,-1)); */
 
 // Opdracht 2.3
-let someKittens = "Die nieuwe kittens zijn zo schattig!";
+/* let someKittens = "Die nieuwe kittens zijn zo schattig!";
 let anArray = someKittens.split(" ");
-console.log(anArray);
+console.log(anArray); */
 
+// Opdracht 3.1
+/* let x = 4;
+let y = 8;
+if (x == 4 && y==8) {
+    console.log("Result!");
+} */
+
+/* let x = 4;
+let y = 8;
+if (x == 4 || y==8) {
+    
+} else {
+console.log("Result!");
+} */
+
+/* let x = 4;
+let y = 8;
+if (!(x == 4 || y==8)) {
+    
+} else {
+console.log("Result!");
+}
+*/
+
+/* let x = 4;
+let y = 8;
+if (!(x == 4 && y==8)) {
+    
+} else {
+console.log("Result!");
+} */
+
+// let x = 34;
+
+// if ((x > 5) && (x < 10)) {
+// console.log("De waarde is tussen 5 en 10");
+// } else if ((x => 11) && (x <= 20)) {
+// console.log("De waarde is tussen 11 en 20");
+// } else if ((x == 21) || (x == 23)) {
+// console.log("De waarde is 21 of 23");
+// } else if ((x < 35) || ((x > 40) && (x < 45))) {
+// console.log("De waarde is onder 35 of tussen 40 en 45");
+// }
+
+let x = 9;
+
+if ((x > 5) && (x < 10)) {
+console.log("De waarde is tussen 5 en 10");
+} 
+if ((x => 11) && (x <= 20)) {
+console.log("De waarde is tussen 11 en 20");
+}
+if ((x == 21) || (x == 23)) {
+console.log("De waarde is 21 of 23");
+}
+if ((x < 35) || ((x > 40) && (x < 45))) {
+console.log("De waarde is onder 35 of tussen 40 en 45");
+}
