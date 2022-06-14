@@ -219,6 +219,49 @@ switch (x) {
         console.log("Geen geldige maand!");
 } */
 
-let x = 3;
+/* let x = 3;
 ((x<=4) && (x>=0)) ? results = 2 : results = 5;
-console.log(results);
+console.log(results); */
+
+// Opdracht 4.1
+function clickButton() {
+    console.log("Hello World!");
+}
+
+// logParameter(inputElement);
+
+// logParameter("test");
+
+// function logParameter(aParameter) {
+//     console.log(aParameter.innerField);
+// }
+
+// let inputElement = document.GetElementByID("input-field");
+// logParameter(inputElement);
+
+
+
+// OPTIE 1: Logs getypte input in console, maar je doet niks met de parameter in de js
+
+// function logParameter(parameter) {
+//     let inputElement = document.getElementById('input').value;
+//     console.log(inputElement);
+// }
+
+// OPTIE 2: Logs getypte input in console & kan de parameter aanpassen, maar DOM staat in html element
+// function logParameter(input) {
+//     console.log(input);
+//     return input * 2
+// }
+// let result = logParameter(9);
+// console.log(result);
+
+
+// OPTIE 3: Logs de parameter die in de elements functie staat
+// function logParameter(parameter) {
+//     let inputElement = document.getElementById('input');
+//     console.log(parameter);
+//     return parameter * 2;
+// }
+// let result = logParameter(9);
+//     console.log(result);

@@ -348,3 +348,66 @@ let x = 3;
 ((x<=4) && (x>=0)) ? results = 2 : results = 5;
 console.log(results);
 ```
+
+### **Opdracht 4.2**
+1. _Onderzoek de volgende DOM methodes en gebruik ze in een voorbeeld:_
+- document.getElementsByClassName:
+Dit werkt net als document.getElementsById, alleen i.p.v. met een id wordt een element op basis de classnaam geselecteerd.
+
+```
+<button class="button"></button>
+<script>
+let button = document.getElementsByClassName('button');
+</script>
+```
+
+- document.getElementsByTagName
+Hierbij wordt een element geselecteerd op basis van de tag naam.
+```
+<p>Een stuk tekst</p>
+<script>
+let text = document.getElementsByClassName('p');
+</script>
+```
+
+- document.querySelector
+Hierbij wordt enkel het eerste element geselecteerd met een bepaalde tag, id of class.
+```
+<button class="button"></button>
+<script>
+let button = document.querySelector('.button');
+</script>
+```
+
+- document.querySelectorAll
+Hierbij worden alle elementen met een overeenkomende tag, id of class geselecteerd.
+```
+<button class="blue"></button>
+<div class="blue"></div>
+<script>
+let color = document.querySelectorAll('.blue');
+</script>
+```
+
+- element.innerHTML
+Hiermee kan je de content van een element selecteren en op deze wijze ook aanpassen.
+```
+<p class="text">Dit is tekst</p>
+
+<script>
+ document.getElementsByClassName('text').innerHTML = "De tekst verander ik hierin";
+</script>
+```
+
+- element.innerText
+Hiermee kan je de tekst content van een element selecteren.
+```
+<button class="button">Tekst binnen een button</button>
+
+<script>
+let text = document.getElementByClassName("button").innerText;
+console.log(text);
+</script>
+```
+
+2. _Bij opdracht 4.1c heb je een input als parameter meegegeven. Roep die functie nu aan met een oninput ipv onchange, en console.log() de parameter.value ipv de parameter. Zie je de verschillen als je nu wat intypt?_ 
