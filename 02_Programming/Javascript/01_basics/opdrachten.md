@@ -238,3 +238,113 @@ console.log("De waarde is onder 35 of tussen 40 en 45");
 ```
 
 Bij het plaatsen van de if/else in aparte if blokken worden er verschillende uitkomsten gelogd. Als de waarde bijvoorbeeld '8' is, wordt niet alleen "De waarde is tussen 5 en 10" gelogd, maar ook "De waarde is onder 35 of tussen 40 en 45", omdat de waarde onder de 35 is en de condition 'if ((x > 5) && (x < 10))' niet ziet.
+
+### **Opdracht 3.2**
+1. _Schrijf een If/Else blok die een eigen variabele controleert:_
+
+- Gelijk aan 3?
+- Groter dan 4?
+- Groter dan 11?
+- Kleiner dan 3?
+
+```
+let x = 3;
+
+if (x == 3) {
+console.log("De waarde is 3");
+} else if ((x > 4) && (x < 12)) {
+console.log("De waarde is hoger dan 4");
+} else if (x > 11) {
+console.log("De waarde is hoger dan 11");
+} else if (x < 3) {
+console.log("De waarde is lager dan 3");
+}
+```
+
+2. _Test je variabele met 2, 3, 4, 5 en 20. Gebeurt er iets onverwachts?_
+In het eerste geval gaf de console bij getallen boven de 11 als resultaat "De waarde is hoger dan 4" i.p.v. "De waarde is hoger dan 11". Dit heb ik opgelost door bij het controleren over het resultaat hoger dan 4 is, ook te controleren of het resultaat lager dan 12 is.
+
+3. _Schrijf een If/Else die een variabele op numerieke waarde controleert, en de passende maand in je console logt._
+```
+let x = 17;
+
+if (x == 1) {
+    console.log("Januari");
+} else if (x == 2) {
+    console.log("Februari");
+} else if (x == 3) {
+    console.log("Maart");
+} else if (x == 4) {
+    console.log("April");
+} else if (x == 5) {
+    console.log("Mei");
+} else if (x == 6) {
+    console.log("Juni");
+} else if (x == 7) {
+    console.log("Juli");
+} else if (x == 8) {
+    console.log("Augustus");
+} else if (x == 9) {
+    console.log("September");
+} else if (x == 10) {
+    console.log("Oktober");
+} else if (x == 11) {
+    console.log("November");
+} else if (x == 12) {
+    console.log("December");
+} else {
+    console.log("Geen geldige maand!");
+}
+```
+
+4. _Bouw nu opdracht C met een Switch/case._
+```
+let x = 12;
+switch (x) {
+    case 1:
+        console.log("Januari");
+        break;
+    case 2:
+        console.log("Februari");
+        break;
+    case 3:
+        console.log("Maart");
+        break;
+    case 4:
+        console.log("April");
+        break;
+    case 5:
+        console.log("Mei");
+        break;
+    case 6:
+        console.log("Juni");
+        break;
+    case 7:
+        console.log("Juli");
+        break;
+    case 8:
+        console.log("Augustus");
+        break;
+    case 9:
+        console.log("September");
+        break;
+    case 10:
+        console.log("Oktober");
+        break;
+    case 11:
+        console.log("November");
+        break;
+    case 12:
+        console.log("December");
+        break;
+    default:
+        console.log("Geen geldige maand!");
+}
+```
+
+5. _Gegeven de volgende code. Herschrijf dit als een Ternary Operator._
+```
+let x = 3;
+((x<=4) && (x>=0)) ? results = 2 : results = 5;
+console.log(results);
+```
