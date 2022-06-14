@@ -49,7 +49,7 @@ ul img {
   color: white;
   float: right;
   line-height: 60px;
-  margin-right: 120px;
+  margin-right: 80px;
   margin-top: 28px;
   display: none;
   cursor: pointer;
@@ -121,8 +121,6 @@ ul img {
     width: 100%;
     height: 100vh;
     text-align: left;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
     background: #2F125F;
@@ -154,6 +152,8 @@ ul img {
     display: block;
   }
   #toggle:checked ~ .nav-links {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
     -webkit-transform: translateX(0%);
             transform: translateX(0%);
   }
@@ -365,40 +365,6 @@ ul img {
   border-radius: 10%;
   margin-top: 10px;
   margin-left: auto;
-}
-
-.accordion {
-  background-color: #003cff;
-  height: 50px;
-  width: 800px;
-  margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 10px;
-}
-
-.accordion p {
-  font-size: 20px;
-  color: white;
-}
-
-#accordion {
-  position: relative;
-  top: 5px;
-  left: -30px;
-  z-index: 2;
-}
-
-.accordion-text {
-  visibility: hidden;
-}
-
-.accordion #accordion:checked {
-  visibility: visible;
 }
 
 .image-overlay {
