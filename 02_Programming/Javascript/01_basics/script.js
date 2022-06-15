@@ -75,28 +75,28 @@ let anArray = someKittens.split(" ");
 console.log(anArray); */
 
 // Opdracht 3.1
-/* let x = 4;
-let y = 8;
-if (x == 4 && y==8) {
-    console.log("Result!");
-} */
+// let x = 5;
+// let y = 8;
+// if (x == 4 && y==8) {
+//     console.log("Result!");
+// }  
 
-/* let x = 4;
-let y = 8;
-if (x == 4 || y==8) {
-    
-} else {
-console.log("Result!");
-} */
+// let x = 5;
+// let y = 8;
+// if (x == 4 || y==8) {
+//     console.log("Result!");
+// } else {
 
-/* let x = 4;
-let y = 8;
-if (!(x == 4 || y==8)) {
+// } 
+
+//  let x = 4;
+// let y = 8;
+// if (!(x == 4 || y==8)) {
     
-} else {
-console.log("Result!");
-}
-*/
+// } else {
+// console.log("Result!");
+// }
+
 
 /* let x = 4;
 let y = 8;
@@ -228,40 +228,65 @@ function clickButton() {
     console.log("Hello World!");
 }
 
-// logParameter(inputElement);
+let inputElement = document.getElementById('input');
 
-// logParameter("test");
+function logParameter(parameter) {
+    console.log(parameter);
+    let result = console.log(parameter * 2)
+    return result;
+}
 
-// function logParameter(aParameter) {
-//     console.log(aParameter.innerField);
+
+// Opdracht 4.2
+   /* function logParameter(parameter) {
+    console.log(parameter.value);
+    let result = console.log(parameter * 2)
+    return result;
+} */
+
+// Opdracht 4.3
+function randomNumber(x) {
+    console.log(Math.floor(Math.random() * x));
+}
+
+// Opdracht 4.4 
+
+// function recName(parameter){ 
+// if (parameter == "Madwhi" || parameter == "Nathan" || parameter == "Luisa" || parameter == "Esther") {
+//     return console.log("Die naam ken ik")
+// } else {
+//     return console.log("Die naam ken ik niet")
+// }
+// }
+// recName('Esther')
+
+
+// Verandert tekst binnen div:
+// let div = document.querySelector("p");
+
+// function recName(parameter){ 
+// if (parameter == "Madwhi" || parameter == "Nathan" || parameter == "Luisa" || parameter == "Esther") {
+//     div.innerText = "Die naam ken ik";
+//     return console.log("Die naam ken ik")
+// } else {
+//     div.innerText = "Die naam ken ik niet";
+//     return console.log("Die naam ken ik niet")
+// }
 // }
 
-// let inputElement = document.GetElementByID("input-field");
-// logParameter(inputElement);
+// Met Arrow Functions
 
+// let div = document.querySelector("p");
 
+// recName = (parameter) => (parameter == "Madwhi" || parameter == "Nathan" || parameter == "Luisa" || parameter == "Esther") ?
+//         div.innerText = "Die naam ken ik" : div.innerText = "Die naam ken ik niet"
 
-// OPTIE 1: Logs getypte input in console, maar je doet niks met de parameter in de js
+// recName('Esther')
 
-// function logParameter(parameter) {
-//     let inputElement = document.getElementById('input').value;
-//     console.log(inputElement);
-// }
+// Opdracht 5.1
+let cijfers = [6, 2, 4, 1, 9, 10, 3, 8, 5, 7];
+console.log(cijfers);
 
-// OPTIE 2: Logs getypte input in console & kan de parameter aanpassen, maar DOM staat in html element
-// function logParameter(input) {
-//     console.log(input);
-//     return input * 2
-// }
-// let result = logParameter(9);
-// console.log(result);
-
-
-// OPTIE 3: Logs de parameter die in de elements functie staat
-// function logParameter(parameter) {
-//     let inputElement = document.getElementById('input');
-//     console.log(parameter);
-//     return parameter * 2;
-// }
-// let result = logParameter(9);
-//     console.log(result);
+let fruit = ["Appel", "Aardbei", "Banaan", "Kiwi", "Druif"];
+console.log(fruit);
+console.log(fruit[0], fruit[1])

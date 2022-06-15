@@ -187,10 +187,8 @@ if (x == 4 && y==8) {
 let x = 4;
 let y = 8;
 if (x == 4 || y==8) {
-    
-} else {
 console.log("Result!");
-}
+} 
 ```
 
 5. _Zet nu de console.log(“Results”) in een Else { } na de If. Kan je de conditie omdraaien zodat je alsnog “Results!” te zien krijgt?_
@@ -411,3 +409,24 @@ console.log(text);
 ```
 
 2. _Bij opdracht 4.1c heb je een input als parameter meegegeven. Roep die functie nu aan met een oninput ipv onchange, en console.log() de parameter.value ipv de parameter. Zie je de verschillen als je nu wat intypt?_ 
+De console logged meteen wanneer je een teken intypt i.p.v. eerst op enter te moeten klikken. Door .value achter de parameter te zetten reageert de console niet meer als je tekst in de input typt.
+
+### **Opdracht 4.3**
+1. _Maak een functie randomNumber() en verbindt die aan een button. Zorg dat de functie Math.random() in de console logt. Wat merk je op als je deze meerdere keren gebruikt?_
+Alle getallen hebben 10+ cijfers achter de komma en zijn allemaal onder de 1.
+
+2. _Verander je functie nu dat hij een parameter x gebruikt, en zorg dat hij het volgende in je console logt: Math.floor(Math.random() * x). Test nu je functie met verschillende waardes voor x. Valt iets je op?_
+Er komen nu enkel gehele getallen uit en kunnen ook boven de 1 zijn. 
+
+3. _Er zijn nog 2 belangrijke Math methods die handig zijn om te kennen. Onderzoek wat Math.min() en Math.max() doen. Kan je van beide al een voorbeeld geven?_
+Met Math.min() en Math.max() kan je het laagste en hoogste parameter vinden, mits de parameters nummers zijn. In het voorbeeld logs minMath een 2 en de maxMath een 65:
+
+```
+let minMath = Math.min(5, 19, 2, 65, 32);
+console.log(minMath);
+
+let maxMath = Math.min(5, 19, 2, 65, 32);
+console.log(maxMath);
+```
+
+### **Opdracht 5.1**
