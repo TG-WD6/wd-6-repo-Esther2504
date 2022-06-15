@@ -250,7 +250,6 @@ function randomNumber(x) {
 }
 
 // Opdracht 4.4 
-
 // function recName(parameter){ 
 // if (parameter == "Madwhi" || parameter == "Nathan" || parameter == "Luisa" || parameter == "Esther") {
 //     return console.log("Die naam ken ik")
@@ -281,7 +280,7 @@ function randomNumber(x) {
 // recName = (parameter) => (parameter == "Madwhi" || parameter == "Nathan" || parameter == "Luisa" || parameter == "Esther") ?
 //         div.innerText = "Die naam ken ik" : div.innerText = "Die naam ken ik niet"
 
-// recName('Esther')
+// recName()
 
 // Opdracht 5.1
 let cijfers = [6, 2, 4, 1, 9, 10, 3, 8, 5, 7];
