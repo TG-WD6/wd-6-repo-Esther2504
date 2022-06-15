@@ -287,6 +287,6 @@ function randomNumber(x) {
 let cijfers = [6, 2, 4, 1, 9, 10, 3, 8, 5, 7];
 console.log(cijfers);
 
-let fruit = ["Appel", "Aardbei", "Banaan", "Kiwi", "Druif"];
+let fruit = ["Appel", "Aardbei", "Banaan", "Kiwi", "Mango"];
 console.log(fruit);
 console.log(fruit[0], fruit[1])
