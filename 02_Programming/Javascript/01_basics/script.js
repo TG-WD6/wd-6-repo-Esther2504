@@ -282,6 +282,25 @@ function randomNumber(x) {
 
 // recName()
 
+// Met tweede functie
+function recName(parameter){ 
+if (parameter == "Madwhi" || parameter == "Nathan" || parameter == "Luisa" || parameter == "Esther") {
+    let bekend = "Die naam ken ik";
+    return bekend;
+} else {
+    let onbekend = "Die naam ken ik niet";
+    return onbekend;
+}
+}
+
+let callfunction = recName('Esther');
+
+function displayMessage() {
+    let div = document.querySelector("p");
+    div.innerText = callfunction;
+}
+
+
 // Opdracht 5.1
 let cijfers = [6, 2, 4, 1, 9, 10, 3, 8, 5, 7];
 console.log(cijfers);
@@ -289,3 +308,18 @@ console.log(cijfers);
 let fruit = ["Appel", "Aardbei", "Banaan", "Kiwi", "Mango"];
 console.log(fruit);
 console.log(fruit[0], fruit[1])
+
+let random = cijfers[Math.floor(Math.random() * cijfers.length)]
+console.log(fruit[random])
+
+console.log(fruit.length);
+
+let remainder = fruit.length % cijfers.length;
+let randommodulo = Math.floor(Math.random() * remainder);
+console.log(fruit[randommodulo]);
+
+fruit[0] = "Pear";
+console.log(fruit);
+
+fruit.splice(0, 2, "Aardbei", "Pear");
+console.log(fruit);
