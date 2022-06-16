@@ -309,8 +309,8 @@ let fruit = ["Appel", "Aardbei", "Banaan", "Kiwi", "Mango"];
 console.log(fruit);
 console.log(fruit[0], fruit[1])
 
-let random = cijfers[Math.floor(Math.random() * cijfers.length)]
-console.log(fruit[random])
+let random = cijfers[Math.floor(Math.random() * cijfers.length)];
+console.log(fruit[random]);
 
 console.log(fruit.length);
 
@@ -323,3 +323,52 @@ console.log(fruit);
 
 fruit.splice(0, 2, "Aardbei", "Pear");
 console.log(fruit);
+
+// Opdracht 5.2
+const dutchSports = ["Voetbal", "Hockey", "Schaatsen"];
+console.log(dutchSports[0]);
+console.log(dutchSports[1]);
+console.log(dutchSports[2]);
+
+for (const x in dutchSports) {
+    console.log(x)
+}
+
+for (const x of dutchSports) {
+    console.log(x)
+}
+
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+
+for (i = 0; i < 21; i++) {
+    if (i % 2 == 0) {
+    console.log(i)
+    }
+}
+
+// Met for...of
+for (let i of numbers) {
+    if (i % 2 == 0) {
+        console.log(i)
+    }
+}
+
+// let numbersloop = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+for (let i = 0; i < 3; i++) {
+    for (let j = 1; j < 11; j++) {
+      console.log(j);
+    }
+  }
+
+  for (let i = 0; i < 1; i++) {
+    for (let j = 1; j < 11; j++) {
+      console.log(j);
+    }
+    for (let j = 1; j < 11; j++) {
+        console.log(j * 2);
+      }
+      for (let j = 1; j < 11; j++) {
+        console.log(j * 3);
+      }
+  }
