@@ -92,7 +92,7 @@ console.log(anArray); */
 //  let x = 4;
 // let y = 8;
 // if (!(x == 4 || y==8)) {
-    
+
 // } else {
 // console.log("Result!");
 // }
@@ -238,10 +238,10 @@ function logParameter(parameter) {
 
 
 // Opdracht 4.2
-   /* function logParameter(parameter) {
-    console.log(parameter.value);
-    let result = console.log(parameter * 2)
-    return result;
+/* function logParameter(parameter) {
+ console.log(parameter.value);
+ let result = console.log(parameter * 2)
+ return result;
 } */
 
 // Opdracht 4.3
@@ -283,14 +283,14 @@ function randomNumber(x) {
 // recName()
 
 // Met tweede functie
-function recName(parameter){ 
-if (parameter == "Madwhi" || parameter == "Nathan" || parameter == "Luisa" || parameter == "Esther") {
-    let bekend = "Die naam ken ik";
-    return bekend;
-} else {
-    let onbekend = "Die naam ken ik niet";
-    return onbekend;
-}
+function recName(parameter) {
+    if (parameter == "Madwhi" || parameter == "Nathan" || parameter == "Luisa" || parameter == "Esther") {
+        let bekend = "Die naam ken ik";
+        return bekend;
+    } else {
+        let onbekend = "Die naam ken ik niet";
+        return onbekend;
+    }
 }
 
 let callfunction = recName('Esther');
@@ -342,7 +342,7 @@ let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19
 
 for (i = 0; i < 21; i++) {
     if (i % 2 == 0) {
-    console.log(i)
+        console.log(i)
     }
 }
 
@@ -353,22 +353,72 @@ for (let i of numbers) {
     }
 }
 
-// let numbersloop = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
+// Loops 1-10
 for (let i = 0; i < 3; i++) {
     for (let j = 1; j < 11; j++) {
-      console.log(j);
+        console.log(j);
     }
-  }
+}
 
-  for (let i = 0; i < 1; i++) {
+// Opdracht 5.2 bullet 5
+for (let i = 1; i < 4; i++) {
     for (let j = 1; j < 11; j++) {
-      console.log(j);
+        console.log(i * j)
     }
+}
+
+// Reeks van Fibonacci
+let fibonacci = [0, 1]
+
+for (let i = 0; i < fibonacci.length; i++) {
     for (let j = 1; j < 11; j++) {
-        console.log(j * 2);
-      }
-      for (let j = 1; j < 11; j++) {
-        console.log(j * 3);
-      }
-  }
+        console.log(i + j);
+    }
+}
+
+// Bubble sort - OPNIEUW MAKEN
+
+let bubble = [2, 7, 5, 10, 4, 9, 3, 1, 8, 6];
+
+for (var i = 0; i < bubble.length; i++) {
+    for (var j = 0; j < bubble.length - i + 1; j++) {
+        if (bubble[j -1] > bubble[j]) {
+            var sort = bubble[j-1];
+            bubble[j-1] = bubble[j];
+            bubble[j] = sort;
+        }
+    }
+}
+
+console.log(bubble);
+
+// Opdracht 5.3
+// Adds 3 items to array
+const dutchSport = ["Voetbal", "Hockey", "Schaatsen"];
+dutchSport.push("Zeilen", "Zwemmen");
+dutchSport.unshift("Volleybal");
+
+console.log(dutchSport);
+
+// Puts ballsports in own var
+const ballSports = dutchSport.slice(0,3);
+console.log(ballSports);
+
+// Removes ballsports from dutchsports
+dutchSport.splice(0,3);
+console.log(dutchSport);
+
+// Puts items in abc order
+dutchSport.sort();
+ballSports.sort();
+console.log(dutchSport);
+console.log(ballSports);
+
+// Logs individual items
+ballSports.forEach(sport => console.log(sport))
+dutchSport.forEach(sport => console.log(sport))
+
+// Logs length of every item
+const sportsLength = [dutchSport[0].length, dutchSport[1].length, dutchSport[2].length, ballSports[0].length, ballSports[1].length, ballSports[2].length]
+console.log(sportsLength);
+
