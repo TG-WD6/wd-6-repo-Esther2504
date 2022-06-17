@@ -429,4 +429,36 @@ let maxMath = Math.min(5, 19, 2, 65, 32);
 console.log(maxMath);
 ```
 
-### **Opdracht 5.1**
+### **Opdracht 5.4**
+_Onderzoek de volgende array methods en maak voor elke een voorbeeld:_
+- filter(): Deze method maakt een nieuwe array met de items die aan de eisen voldoen.
+```
+const namen = ["John", "Peter", "Jennifer", "Max", "Juliette"]
+const filter = namen.filter(naam => naam.length < 5)
+console.log("Namen met minder dan vijf letters zijn " + filter)
+```
+
+- find(): Deze method geeft het eerste item dat voldoet aan de eisen terug.
+```
+const namen = ["John", "Peter", "Jennifer", "Max", "Juliette"]
+const find = namen.find(naam => naam.length > 6)
+console.log("De eerste naam met meer dan 6 letters is " + find)
+```
+- some(): Deze method controleert of er een item is die aan de eisen voldoet en geeft vervolgens een boolean terug.
+```
+const namen = ["John", "Peter", "Jennifer", "Max", "Juliette"]
+const some = namen.some(naam => naam.length > 8)
+console.log("Is er een naam met meer dan 8 letters? " + some)
+```
+- every(): Deze method controleert of alle items voldoen aan de eisen en geeft vervolgens een boolean terug.
+```
+const namen = ["John", "Peter", "Jennifer", "Max", "Juliette"]
+const every = namen.every(naam => naam.length < 9)
+console.log("Hebben alle namen minder dan 9 letters? " + every)
+```
+- includes(): Deze method controleert of er een item met een bepaald gegeven waarde is en geeft vervolgens een boolean terug.
+```
+const namen = ["John", "Peter", "Jennifer", "Max", "Juliette"]
+const includes = namen.includes("Tom")
+console.log("Heeft de array de naam Tom? " + includes)
+```

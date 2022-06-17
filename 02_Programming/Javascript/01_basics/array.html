@@ -12,10 +12,34 @@
     <h2>Opdracht 5.4</h2>
     <div>Some Text</div>
     <div>Some Text</div>
+    <button>Test</button>
     <script>
         let arrayLike = document.querySelectorAll('div')
         console.log(arrayLike);
-        console.log(Array.from(arrayLike))
+        console.log(Array.from(arrayLike));
+
+        const namen = ["John", "Peter", "Jennifer", "Max", "Juliette"]
+        const filter = namen.filter(naam => naam.length < 5)
+        console.log("Namen met minder dan vijf letters zijn " + filter)
+
+        const find = namen.find(naam => naam.length > 6)
+        console.log("De eerste naam met meer dan 6 letters is " + find)
+
+        const some = namen.some(naam => naam.length > 8)
+        console.log("Is er een naam met meer dan 8 letters? " + some)
+
+        const every = namen.every(naam => naam.length < 9)
+        console.log("Hebben alle namen minder dan 9 letters? " + every)
+
+        const includes = namen.includes("Tom")
+        console.log("Heeft de array de naam Tom? " + includes)
+
+        const button = document.querySelector('button');
+
+        button.onclick = function test() {
+            console.log("Testing")
+            button.innerText = "Clicked!"
+        }
     </script>
 </body>
 
