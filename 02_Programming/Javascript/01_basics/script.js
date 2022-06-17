@@ -370,11 +370,12 @@ for (let i = 1; i < 4; i++) {
 // Reeks van Fibonacci - OPNIEUW MAKEN
 let fibonacci = [0, 1];
 
-for (let i = fibonacci.length; i < 52; i++) {
-        fibonacci[i] = fibonacci[i - 2] + fibonacci[i - 1];
-        console.log(fibonacci[i]);
+for (let i = fibonacci.length; i < 50; i++) {
+        fibonacci[i] = fibonacci[i - 2] + fibonacci[i - 1]; // i-1 en i-2 verwijzen naar de twee getallen voor i
+        fibonacci.push(i);
 }
-  
+console.log(fibonacci);
+
 
 // Bubble sort - OPNIEUW MAKEN
 
