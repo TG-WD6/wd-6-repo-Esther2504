@@ -367,14 +367,14 @@ for (let i = 1; i < 4; i++) {
     }
 }
 
-// Reeks van Fibonacci
-let fibonacci = [0, 1]
+// Reeks van Fibonacci - OPNIEUW MAKEN
+let fibonacci = [0, 1];
 
-for (let i = 0; i < fibonacci.length; i++) {
-    for (let j = 1; j < 11; j++) {
-        console.log(i + j);
-    }
+for (let i = fibonacci.length; i < 52; i++) {
+        fibonacci[i] = fibonacci[i - 2] + fibonacci[i - 1];
+        console.log(fibonacci[i]);
 }
+  
 
 // Bubble sort - OPNIEUW MAKEN
 
@@ -382,9 +382,9 @@ let bubble = [2, 7, 5, 10, 4, 9, 3, 1, 8, 6];
 
 for (var i = 0; i < bubble.length; i++) {
     for (var j = 0; j < bubble.length - i + 1; j++) {
-        if (bubble[j -1] > bubble[j]) {
-            var sort = bubble[j-1];
-            bubble[j-1] = bubble[j];
+        if (bubble[j - 1] > bubble[j]) {
+            var sort = bubble[j - 1];
+            bubble[j - 1] = bubble[j];
             bubble[j] = sort;
         }
     }
