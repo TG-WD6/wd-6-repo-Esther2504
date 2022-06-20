@@ -462,3 +462,11 @@ const namen = ["John", "Peter", "Jennifer", "Max", "Juliette"]
 const includes = namen.includes("Tom")
 console.log("Heeft de array de naam Tom? " + includes)
 ```
+
+### **Opdracht 6.1**
+1. _Maak meerdere objects Pet met een naam en een soort. Maak een ander dier met elk van de 5 soorten constructor uit de voorbeelden en log deze in de console. Kijk bij elke ook naar de prototype - kan je een verschil ontdekken?_
+
+Alle prototypes zijn objects met dezelfde properties, maar de function en singleton constructer hebben een prototype binnen het prototype. De class-based constructor heeft als property niet Object, zoals de rest, maar een class.
+
+2. _Gebruik Object.create() om een Object aan te maken. Doe dit voor elke Pet die je in de vorige opdracht hebt gemaakt, en log ze in de console. Valt er iets op aan de prototype?_
+Nu zitten er binnen de verschillende objects meerdere prototypes.
