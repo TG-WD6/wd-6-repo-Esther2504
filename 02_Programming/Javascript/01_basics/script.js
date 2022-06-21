@@ -542,7 +542,7 @@ let snakePet = Object.create(petSnake, {
 console.log(snakePet)
 
 
-console.log('----------------------');
+console.log('-----------6.1-----------');
 
 let people = [
     {
@@ -588,38 +588,152 @@ let people = [
 
 ]
 
+// console.log(JSON.stringify(people)[0].age)
+
 // people.forEach(person => {
 //     console.log(person.name, person.age)
 // }
-    // )
-    
-people.splice(1, 2, people[1], people[2])
-    
-// people[age].sort()
-
+// )
 
 console.log(people)
 
-console.log('----------------------');
+console.log(Object.values(people)[1].age);
 
+for (var j = 0; j < 10; j++) {
+    for (var i = 0; i < 10 - 1; i++) {
+        if (Object.values(people)[i].age > Object.values(people)[i + 1].age) {
+            Object.values(people)[i].age, Object.values(people)[i + 1].age = Object.values(people)[i + 1].age, Object.values(people)[i].age; //
+        }
+    }
+}
+console.log(people)
+
+var sorted = people.sort(function sortAge(a, b) {
+    if (a.age < b.age) {
+        return -1;
+    }
+    else if (a.age > b.age) {
+        return 1;
+    }
+    return 0;
+})
+console.log(sorted);
+
+
+
+// console.log(people.splice(1, 2, people[1], people[2]))
+
+// people[age].sort()
+
+
+
+console.log('-----------6.2-----------');
+
+// Opdracht 6.2
+
+
+class Contact {
+    constructor(adres, nummer, contactp) {
+        this.adres = adres
+        this.nummer = nummer
+        this.contactp = contactp
+    }
+}
 class Club {
-    constructor(naam, type, ledenaantal) {
+    constructor(naam, type, ledenaantal, contactinfo) {
         this.naam = naam
         this.type = type
         this.ledenaantal = ledenaantal
-    
-        class Contact {
-            constructor(adres, nummer, contactp) {
-            this.adres = adres
-            this.nummer = nummer
-            this.contactp = contactp
-        }}
-    }   
-}
+        this.contactinfo = contactinfo
+      
+        }
 
-const Utrecht = new Club("FC Utrecht", "Voetbal", "50.000")
-let test = new Club.Contact("adres", "063957489", "m")
+    }
 
-console.log(Utrecht)
+// Punt 4
+const contacthelp = new Contact("randomstraat 34", "0632983973", "Jan Jansen")
+const ajax = new Club("Ajax", "Voetbalclub", "80.000", contacthelp)
+console.log(ajax)
 
-let clubs = [voetbalclub, schaakclub]
+const feyenoord = new Club("Feyenoord", "Voetbalclub", "80.000", contacthelp)
+console.log(feyenoord)
+feyenoord.contactinfo.contactp = "Peter"
+console.log(feyenoord)
+console.log()
+
+
+
+const voetbalclub = new Club3("FC Utrecht", "Voetbal", "50.000", "Beukenlaan 4", "0695837883", "Jan Jansen")
+const schaakclub = new Club3("S.C. Schaakmat", "Schaken", "400", "Jagersstraat 9", "0698399774", "Piet Pietersen")
+const fitnessclub = new Club3("GetFit", "Fitness", "190", "Rozenweg 92", "0638958903", "Lisa Loos")
+const studentenclub = new Club3("Studenten Arnhem", "Studentenvereniging", "830", "Penguinstraat 21", "0639759374", "Tom Tobasson")
+const milieuclub = new Club3("Save The Planet", "Mileu", "1400", "Saladesingel 54", "0639840393", "Anna Appel")
+
+const clubs = [voetbalclub, schaakclub, fitnessclub, studentenclub, milieuclub]
+console.log(clubs)
+console.log(voetbalclub)
+
+let clubs2 = [
+    { 
+        naam: "FC Utrecht",
+        type: "Voetbalclub",
+        ledenaantal: "50.000",
+        adres: "Beukenlaan 4",
+        nummer: "0695837883",
+        contactpersoon: "Jan Jansen"
+    },
+    { 
+        naam: "S.C. Schaakmat",
+        type: "Schaakclub",
+        ledenaantal: "400",
+        adres: "Jagersstraat 9",
+        nummer: "0698399774",
+        contactpersoon: "Piet Pietersen"
+    },
+    { 
+        naam: "GetFit",
+        type: "Fitness",
+        ledenaantal: "190",
+        adres: "Rozenweg 92",
+        nummer: "0638958903",
+        contactpersoon: "Lisa Loos"
+    },
+    { 
+        naam: "S.V. Betula",
+        type: "Studentenvereniging",
+        ledenaantal: "830",
+        adres: "Penguinstraat 21",
+        nummer: "0639759374",
+        contactpersoon: "Tom Tobasson"
+    },
+    { 
+        naam: "Save the Planet",
+        type: "Milieuclub",
+        ledenaantal: "1400",
+        adres: "Saladesingel 54",
+        nummer: "0639840393",
+        contactpersoon: "Anna Appel"
+    },
+]
+
+clubs2.forEach(club => {
+    for (let i in club) {
+        console.log(`De naam van de club is ${club.naam}, het telefoonnummer ${club.nummer} en het contactpersoon is ${club.contactpersoon}`);
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+// let array = [Object.values(voetbal)[0],[4], schaken];
+// console.log(array)
+
+
