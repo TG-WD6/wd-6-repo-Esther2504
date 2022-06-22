@@ -13,11 +13,11 @@ function logParameter(parameter) {
 
 
 // Opdracht 4.2
-/* function logParameter(parameter) {
- console.log(parameter.value);
- let result = console.log(parameter * 2)
- return result;
-} */
+//  function logParameter(parameter) {
+//  console.log(parameter.value);
+//  let result = console.log(parameter * 2)
+//  return result;
+// } 
 
 // Opdracht 4.3
 function randomNumber(x) {
@@ -25,37 +25,37 @@ function randomNumber(x) {
 }
 
 // Opdracht 4.4 
-// function recName(parameter){ 
-// if (parameter == "Madwhi" || parameter == "Nathan" || parameter == "Luisa" || parameter == "Esther") {
-//     return console.log("Die naam ken ik")
-// } else {
-//     return console.log("Die naam ken ik niet")
-// }
-// }
-// recName('Esther')
+function recName(parameter){ 
+if (parameter == "Madwhi" || parameter == "Nathan" || parameter == "Luisa" || parameter == "Esther") {
+    return console.log("Die naam ken ik")
+} else {
+    return console.log("Die naam ken ik niet")
+}
+}
+recName('Esther')
 
 
 // Verandert tekst binnen div:
-// let div = document.querySelector("p");
+let div = document.querySelector("p");
 
-// function recName(parameter){ 
-// if (parameter == "Madwhi" || parameter == "Nathan" || parameter == "Luisa" || parameter == "Esther") {
-//     div.innerText = "Die naam ken ik";
-//     return console.log("Die naam ken ik")
-// } else {
-//     div.innerText = "Die naam ken ik niet";
-//     return console.log("Die naam ken ik niet")
-// }
-// }
+function recName(parameter){ 
+if (parameter == "Madwhi" || parameter == "Nathan" || parameter == "Luisa" || parameter == "Esther") {
+    div.innerText = "Die naam ken ik";
+    return console.log("Die naam ken ik")
+} else {
+    div.innerText = "Die naam ken ik niet";
+    return console.log("Die naam ken ik niet")
+}
+}
 
 // Met Arrow Functions
 
-// let div = document.querySelector("p");
+let divp = document.querySelector("p");
 
-// recName = (parameter) => (parameter == "Madwhi" || parameter == "Nathan" || parameter == "Luisa" || parameter == "Esther") ?
-//         div.innerText = "Die naam ken ik" : div.innerText = "Die naam ken ik niet"
+recName = (parameter) => (parameter == "Madwhi" || parameter == "Nathan" || parameter == "Luisa" || parameter == "Esther") ?
+        divp.innerText = "Die naam ken ik" : divp.innerText = "Die naam ken ik niet"
 
-// recName()
+recName()
 
 // Met tweede functie
 function recName(parameter) {
@@ -73,4 +73,16 @@ let callfunction = recName('Esther');
 function displayMessage() {
     let div = document.querySelector("p");
     div.innerText = callfunction;
+}
+
+
+// Nieuw 4.4
+
+function getInputValue(){
+    var inputVal = document.getElementById("inputBox").value;
+    if (inputVal == "Madwhi" || inputVal == "Nathan" || inputVal == "Luisa" || inputVal == "Esther") {
+        document.getElementById('randomdiv').innerText = "Die naam ken ik!";
+    } else {
+        document.getElementById('randomdiv').innerText = "Die naam ken ik niet!";
+    }
 }

@@ -416,7 +416,7 @@ De console logged meteen wanneer je een teken intypt i.p.v. eerst op enter te mo
 Alle getallen hebben 10+ cijfers achter de komma en zijn allemaal onder de 1.
 
 2. _Verander je functie nu dat hij een parameter x gebruikt, en zorg dat hij het volgende in je console logt: Math.floor(Math.random() * x). Test nu je functie met verschillende waardes voor x. Valt iets je op?_
-Er komen nu enkel gehele getallen uit en kunnen ook boven de 1 zijn. 
+Er komen nu enkel gehele getallen uit en ze kunnen ook boven de 1 zijn. 
 
 3. _Er zijn nog 2 belangrijke Math methods die handig zijn om te kennen. Onderzoek wat Math.min() en Math.max() doen. Kan je van beide al een voorbeeld geven?_
 Met Math.min() en Math.max() kan je het laagste en hoogste parameter vinden, mits de parameters nummers zijn. In het voorbeeld logs minMath een 2 en de maxMath een 65:
