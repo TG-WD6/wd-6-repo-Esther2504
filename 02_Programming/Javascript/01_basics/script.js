@@ -633,94 +633,112 @@ console.log('-----------6.2-----------');
 
 
 class Contact {
-    constructor(adres, nummer, contactp) {
+    constructor(adres, nummer, contactpersoon) {
         this.adres = adres
         this.nummer = nummer
-        this.contactp = contactp
+        this.contactpersoon = contactpersoon
     }
 }
 class Club {
-    constructor(naam, type, ledenaantal, contactinfo) {
+    constructor(naam, type, ledenaantal, contact) {
         this.naam = naam
         this.type = type
         this.ledenaantal = ledenaantal
-        this.contactinfo = contactinfo
-      
-        }
-
+        this.contact = contact
     }
 
-// Punt 4
-const contacthelp = new Contact("randomstraat 34", "0632983973", "Jan Jansen")
-const ajax = new Club("Ajax", "Voetbalclub", "80.000", contacthelp)
-console.log(ajax)
+}
 
-const feyenoord = new Club("Feyenoord", "Voetbalclub", "80.000", contacthelp)
-console.log(feyenoord)
-feyenoord.contactinfo.contactp = "Peter"
-console.log(feyenoord)
-console.log()
+//
 
+const contactajax = new Contact("Beukenlaan 34", "0632983973", "Jan Jansen")
+const contactfeyenoord = new Contact("Jagersstraat 9", "0698399774", "Piet Pietersen")
+const contactutrecht = new Contact("Rozenweg 92", "0638958903", "Lisa Loos")
+const contactaz = new Contact("Penguinstraat 21", "0639759374", "Tom Tobasson")
+const contacttwente = new Contact("Saladesingel 54", "0639840393", "Anna Appel")
 
-
-const voetbalclub = new Club3("FC Utrecht", "Voetbal", "50.000", "Beukenlaan 4", "0695837883", "Jan Jansen")
-const schaakclub = new Club3("S.C. Schaakmat", "Schaken", "400", "Jagersstraat 9", "0698399774", "Piet Pietersen")
-const fitnessclub = new Club3("GetFit", "Fitness", "190", "Rozenweg 92", "0638958903", "Lisa Loos")
-const studentenclub = new Club3("Studenten Arnhem", "Studentenvereniging", "830", "Penguinstraat 21", "0639759374", "Tom Tobasson")
-const milieuclub = new Club3("Save The Planet", "Mileu", "1400", "Saladesingel 54", "0639840393", "Anna Appel")
-
-const clubs = [voetbalclub, schaakclub, fitnessclub, studentenclub, milieuclub]
-console.log(clubs)
-console.log(voetbalclub)
-
-let clubs2 = [
-    { 
-        naam: "FC Utrecht",
-        type: "Voetbalclub",
-        ledenaantal: "50.000",
-        adres: "Beukenlaan 4",
-        nummer: "0695837883",
-        contactpersoon: "Jan Jansen"
-    },
-    { 
-        naam: "S.C. Schaakmat",
-        type: "Schaakclub",
-        ledenaantal: "400",
-        adres: "Jagersstraat 9",
-        nummer: "0698399774",
-        contactpersoon: "Piet Pietersen"
-    },
-    { 
-        naam: "GetFit",
-        type: "Fitness",
-        ledenaantal: "190",
-        adres: "Rozenweg 92",
-        nummer: "0638958903",
-        contactpersoon: "Lisa Loos"
-    },
-    { 
-        naam: "S.V. Betula",
-        type: "Studentenvereniging",
-        ledenaantal: "830",
-        adres: "Penguinstraat 21",
-        nummer: "0639759374",
-        contactpersoon: "Tom Tobasson"
-    },
-    { 
-        naam: "Save the Planet",
-        type: "Milieuclub",
-        ledenaantal: "1400",
-        adres: "Saladesingel 54",
-        nummer: "0639840393",
-        contactpersoon: "Anna Appel"
-    },
+const clubarray = [
+    new Club("Ajax", "Voetbalclub", "110.000", contactajax),
+    new Club("Feyenoord", "Voetbalclub", "80.000", contactfeyenoord),
+    new Club("FC Utrecht", "Voetbalclub", "30.000", contactutrecht),
+    new Club("AZ", "Voetbalclub", "40.000", contactaz),
+    new Club("FC Twente", "Voetbalclub", "20.000", contacttwente)
 ]
 
-clubs2.forEach(club => {
-    for (let i in club) {
-        console.log(`De naam van de club is ${club.naam}, het telefoonnummer ${club.nummer} en het contactpersoon is ${club.contactpersoon}`);
+console.log(clubarray)
+
+const contact = new Contact("randomstraat 34", "0632983973", "Jan Jansen")
+
+clubarray.forEach(club => {
+    for (let i = 0; i < 1; i++) {
+        console.log(`De naam van de club is ${club.naam}, het telefoonnummer ${contact.nummer} en het contactpersoon is ${contact.contactpersoon}`);
     }
 });
+
+const ajax = new Club("Ajax", "Voetbalclub", "80.000", contact)
+const feyenoord = new Club("Feyenoord", "Voetbalclub", "80.000", contact)
+feyenoord.contact.contactpersoon = "John Smith"
+console.log(ajax.contact.contactpersoon)
+
+
+// const voetbalclub = new Club3("FC Utrecht", "Voetbal", "50.000", "Beukenlaan 4", "0695837883", "Jan Jansen")
+// const schaakclub = new Club3("S.C. Schaakmat", "Schaken", "400", "Jagersstraat 9", "0698399774", "Piet Pietersen")
+// const fitnessclub = new Club3("GetFit", "Fitness", "190", "Rozenweg 92", "0638958903", "Lisa Loos")
+// const studentenclub = new Club3("Studenten Arnhem", "Studentenvereniging", "830", "Penguinstraat 21", "0639759374", "Tom Tobasson")
+// const milieuclub = new Club3("Save The Planet", "Mileu", "1400", "Saladesingel 54", "0639840393", "Anna Appel")
+
+// const clubs = [voetbalclub, schaakclub, fitnessclub, studentenclub, milieuclub]
+// console.log(clubs)
+// console.log(voetbalclub)
+
+// let clubs2 = [
+//     {
+//         naam: "FC Utrecht",
+//         type: "Voetbalclub",
+//         ledenaantal: "50.000",
+//         adres: "Beukenlaan 4",
+//         nummer: "0695837883",
+//         contactpersoon: "Jan Jansen"
+//     },
+//     {
+//         naam: "S.C. Schaakmat",
+//         type: "Schaakclub",
+//         ledenaantal: "400",
+//         adres: "Jagersstraat 9",
+//         nummer: "0698399774",
+//         contactpersoon: "Piet Pietersen"
+//     },
+//     {
+//         naam: "GetFit",
+//         type: "Fitness",
+//         ledenaantal: "190",
+//         adres: "Rozenweg 92",
+//         nummer: "0638958903",
+//         contactpersoon: "Lisa Loos"
+//     },
+//     {
+//         naam: "S.V. Betula",
+//         type: "Studentenvereniging",
+//         ledenaantal: "830",
+//         adres: "Penguinstraat 21",
+//         nummer: "0639759374",
+//         contactpersoon: "Tom Tobasson"
+//     },
+//     {
+//         naam: "Save the Planet",
+//         type: "Milieuclub",
+//         ledenaantal: "1400",
+//         adres: "Saladesingel 54",
+//         nummer: "0639840393",
+//         contactpersoon: "Anna Appel"
+//     },
+// ]
+
+// clubs2.forEach(club => {
+//     for (let i in club) {
+//         console.log(`De naam van de club is ${club.naam}, het telefoonnummer ${club.nummer} en het contactpersoon is ${club.contactpersoon}`);
+//     }
+// });
 
 
 
