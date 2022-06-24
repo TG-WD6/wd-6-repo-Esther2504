@@ -103,8 +103,6 @@ class Club {
 
 }
 
-//
-
 const contactajax = new Contact("Beukenlaan 34", "0632983973", "Jan Jansen")
 const contactfeyenoord = new Contact("Jagersstraat 9", "0698399774", "Piet Pietersen")
 const contactutrecht = new Contact("Rozenweg 92", "0638958903", "Lisa Loos")
@@ -123,11 +121,15 @@ console.log(clubarray)
 
 const contact = new Contact("randomstraat 34", "0632983973", "Jan Jansen")
 
-clubarray.forEach(club => {
-    for (let i = 0; i < 1; i++) {
-        console.log(`De naam van de club is ${club.naam}, het telefoonnummer ${contact.nummer} en het contactpersoon is ${contact.contactpersoon}`);
-    }
-});
+for (const element of clubarray) {
+    console.log(`De naam van de club is ${element.naam}, het nummer is ${contact.nummer} en het contactpersoon ${contact.contactpersoon}`);
+  }
+
+//   clubarray.forEach(club => {
+//     for (let i = 0; i < 1; i++) {
+//         console.log(`De naam van de club is ${club.naam}, het telefoonnummer ${contact.nummer} en het contactpersoon is ${contact.contactpersoon}`);
+//     }
+// });
 
 const ajax = new Club("Ajax", "Voetbalclub", "80.000", contact)
 const feyenoord = new Club("Feyenoord", "Voetbalclub", "80.000", contact)
