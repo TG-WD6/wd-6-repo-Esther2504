@@ -531,7 +531,6 @@ We gaan functies oefenen door bij het begin te beginnen:
 
 
 ### **Opdracht 4.2**
-
 We gaan een paar veelgebruikte DOM methods onderzoeken. Je bent inmiddels bekend met document.GetElementById(). Veel andere DOM methods geven Arrays terug - je hebt het inmiddels al vaker gelezen maar hoe je die verwerkt gaan we later nog leren :)
 
 1. Onderzoek de volgende DOM methodes en gebruik ze in een voorbeeld:
@@ -544,9 +543,7 @@ We gaan een paar veelgebruikte DOM methods onderzoeken. Je bent inmiddels bekend
 2. Bij opdracht 4.1c heb je een input als parameter meegegeven. Roep die functie nu aan met een _oninput_ ipv _onchange_, en console.log() de parameter.value ipv de parameter. Zie je de verschillen als je nu wat intypt?
 
 
-
 ### **Opdracht 4.3:**
-
 Eerder heb je kennis gemaakt met het String object en de built-in String Methods. Nu gaan we kennismaken met nog zo een - het Math object. Het Math object heeft namelijk ook methods die bij functies erg veel gebruikt worden:
 
 1. Maak een functie randomNumber() en verbindt die aan een button. Zorg dat de functie Math.random() in de console logt. Wat merk je op als je deze meerdere keren gebruikt?
@@ -564,7 +561,6 @@ Als je meer wil inlezen over het Math object, kan je dat doen via [w3schools](ht
 
 
 ### **Opdracht 4.4:**
-
 We eindigen deze oefeningen met een lastige:
 
 1. Schrijf een functie waar je een naam aan mee kan geven. Laat de naam vergelijken met de namen van mensen in je groepje. Wanneer je functie de naam wel/niet herkent moet dat als boodschap teruggegeven worden.
