@@ -378,11 +378,20 @@ console.log('----------------------');
 // Reeks van Fibonacci
 let fibonacci = [0, 1];
 
+<<<<<<< HEAD
 for (let i = fibonacci.length; i <= 50; i++) {
     fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2]; // i is het getal een en twee voor i opgeteld.
     console.log(fibonacci[i]);
 }
 console.log('----------------------');
+=======
+for (let i = fibonacci.length; i < 50; i++) {
+        fibonacci[i] = fibonacci[i - 2] + fibonacci[i - 1]; // i-1 en i-2 verwijzen naar de twee getallen voor i
+        fibonacci.push(i);
+}
+console.log(fibonacci);
+
+>>>>>>> retro
 
 // Bubble sort
 
