@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.container {
+    border: 2px solid black;
+    width: 1000px;
+    height: 500px;
+    background-color: rgb(234, 234, 234);
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.7s linear;
+    padding: 0px;
+}
+#box {
+    border: 2px solid black;
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    font-size: 24px;
+    margin: 0px;
+    text-align: center;
+}
+
+.box1 {
+    transition-timing-function: ease-in;
+}
+
+.container:hover .box1 {
+    animation: box1 3s alternate;
+    
+}
+
+.container:hover .box2 {
+    animation: box2 3s alternate;
+}
+
+.container:hover .box3 {
+    animation: box3 3s alternate;
+}
+
+@keyframes box1 {
+    0% {
+    transform: translate(0px,0px);
+  }
+    30% {
+    transform: translate(0px,-100px);
+  }
+    100% {
+    transform: translate(460px,-210px);
+  }
+}
+
+@keyframes box2 {
+    0% {
+    transform: translate(0px,0px);
+  }
+    30% {
+    transform: translate(0px,-100px);
+  }
+    100% {
+    transform: translate(-460px,-210px);
+  }
+}
+
+@keyframes box3 {
+    0% {
+    transform: translate(0px,0px);
+  }
+  50% {
+    transform: translate(0px,0px);
+  }
+    80% {
+    transform: translate(-460px,0px);
+  }
+    100% {
+    transform: translate(-460px, 210px);
+  }
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="box" class="box1"><p>1</p></div>
+        <div id="box" class="box2"><p>2</p></div>
+        <div id="box" class="box3"><p>3</p></div>
+    </div>
+</body>
+</html>

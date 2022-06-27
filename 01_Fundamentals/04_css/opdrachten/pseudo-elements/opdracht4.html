@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+.circle1 {
+  position:absolute;
+  left: 50px;
+  width: 100px;
+  height: 100px;
+  background: black;
+  border-radius: 50%;
+
+}
+.circle1 p {
+  font-size: 30px;
+  color: white;
+  position:absolute;
+  top: 5px;
+  left: 40px;
+}
+
+.circle2 {
+  position: relative;
+  left: 200px;
+  width: 100px;
+  height: 100px;
+  background: black;
+  border-radius: 50%
+}
+
+.circle2 p {
+  font-size: 30px;
+  color: white;
+  position: absolute;
+  top: 5px;
+  left: 42px;
+}
+
+.circle3 {
+  position: absolute;
+  left: 350px;
+  top: 10px;
+  width: 100px;
+  height: 100px;
+  background: black;
+  border-radius: 50%
+}
+
+.circle3 p {
+  font-size: 30px;
+  color: white;
+  position:absolute;
+  top: 5px;
+  left: 42px;
+}
+
+.small-circle1::before, .small-circle1::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: black;
+}
+
+.small-circle1::before {
+  left: 30px;
+  top: 35px;
+}
+
+.small-circle1::after {
+  left: 120px;
+  top: 35px;
+}
+
+.small-circle2::before, .small-circle2::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: black;
+}
+
+.small-circle2::before {
+  left: 190px;
+  top: 35px;
+}
+
+.small-circle2::after {
+  left: 275px;
+  top: 35px;
+}
+
+.small-circle3::before, .small-circle3::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: black;
+}
+
+.small-circle3::before {
+  left: 335px;
+  top: 35px;
+}
+
+.small-circle3::after {
+  left: 420px;
+  top: 35px;
+}
+
+.mini-circle1::before, .mini-circle1::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: white;
+}
+
+.mini-circle1::before {
+  left: 50px;
+  top: 50px;
+}
+
+.mini-circle1::after {
+  left: 140px;
+  top: 70px;
+}
+
+.mini-circle2::before, .mini-circle2::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: white;
+}
+
+.mini-circle2::before {
+  left: 210px;
+  top: 50px;
+}
+
+.mini-circle2::after {
+  left: 300px;
+  top: 70px;
+}
+
+.mini-circle3::before, .mini-circle3::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: white;
+}
+
+.mini-circle3::before {
+  left: 355px;
+  top: 50px;
+}
+
+.mini-circle3::after {
+  left: 445px;
+  top: 70px;
+}
+
+    </style>
+</head>
+<body>
+<div class="circle1"><p>1</p></div>
+<div class="small-circle1"></div>
+<div class="mini-circle1"></div>
+<div class="circle2"><p>2</p></div>
+<div class="small-circle2"></div>
+<div class="mini-circle2"></div>
+<div class="circle3"><p>3</p></div>
+<div class="small-circle3"></div>
+<div class="mini-circle3"></div>
+</body>
+</html>

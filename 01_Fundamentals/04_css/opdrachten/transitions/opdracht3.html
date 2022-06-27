@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.container {
+    border: 2px solid black;
+    width: 1000px;
+    background-color: rgb(234, 234, 234);
+}
+#box {
+    border: 2px solid black;
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+    text-align: center;
+}
+
+.box1 {
+    position: relative;
+    left: 0;
+    transition: background-color 3s, border-radius 4s, transform 3s;  
+    transition-timing-function: ease-out;
+}
+
+.container:hover .box1 { 
+    background-color: red;
+    border-radius: 80%;
+    transform: translateX(930px);
+}
+
+.box2 {
+    position: relative;
+    left: 0;
+    transition: background-color 3s, border-radius 4s, transform 3s;  
+    transition-timing-function: ease-in-out;
+}
+
+.container:hover .box2 { 
+    background-color: red;
+    border-radius: 20%;
+    transform: translateX(930px);
+}
+
+.box3 {
+    position: relative;
+    left: 0;
+    transition: background-color 3s, transform 3s;  
+    transition-timing-function: cubic-bezier(.17,.48,.75,.83);
+}
+
+.container:hover .box3 { 
+    background-color: red;
+    transform: translateX(930px);
+}
+
+.box4 {
+    position: relative;
+    left: 0;
+    transition: background-color 3s, transform 3s;  
+    transition-timing-function: ease-in;
+}
+
+.container:hover .box4 { 
+    background-color: red;
+    transform: translateX(930px);
+}
+
+.box5 {
+    position: relative;
+    left: 0;
+    transition: background-color 3s, transform 3s;  
+    transition-timing-function: cubic-bezier(.25, 1.01, 1, -0.9);
+}
+
+.container:hover .box5 { 
+    background-color: red;
+    transform: translateX(930px);
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="box" class="box1"><p>1</p></div>
+        <div id="box" class="box2"><p>2</p></div>
+        <div id="box" class="box3"><p>3</p></div>
+        <div id="box" class="box4"><p>4</p></div>
+        <div id="box" class="box5"><p>5</p></div>
+    </div>
+</body>
+</html>

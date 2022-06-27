@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ .pseudo {
+  position: relative;
+  width: 700px;
+  height: 45px;
+  background: rgb(11, 176, 188);
+  border: none;
+  text-align: center;
+  color: white;
+  font-size: 25px;
+}
+.pseudo::before,
+.pseudo::after {
+  content: "";
+  position: absolute;
+  width: 37px;
+  height: 37px;
+}
+
+.pseudo::before {
+  left: 0;
+  top: 0;
+  border-left: 8px solid orangered;
+  border-top: 8px solid orangered;
+ }
+
+ .pseudo::after {
+  right: 0;
+  bottom: 0;
+  border-right: 8px solid orangered;
+  border-bottom: 8px solid orangered;
+ }
+    </style>
+</head>
+<body>
+    <button class="pseudo">Button</button>
+</body>
+</html>

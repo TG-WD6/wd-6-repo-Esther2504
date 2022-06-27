@@ -1,0 +1,30 @@
+$small-screen: 320px;
+$large-screen: 1200px;
+$information: "only screen and (max-width:500px)";
+
+.box1 {
+    width: 300px;
+    height: 100px;
+    font-size: 20px;
+    background-color: aqua;
+
+    @media (max-width: $small-screen) {
+        width: 150px;
+        font-size: 40px;
+      }
+
+    @media (min-width: $large-screen) {
+        background-color: peru;
+      }
+
+}
+.box2 {
+    width: 300px;
+    height: 100px;
+    font-size: 20px;
+    background-color: lightcoral;
+
+    @media #{$information} {
+    background-color: royalblue;
+    }
+}

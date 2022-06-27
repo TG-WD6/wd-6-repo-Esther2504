@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: lightblue;
+        padding: 10px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        height: 600px;
+        grid-template-areas:
+        "sidebar article1"
+        "sidebar article2"
+    }
+
+    .sidebar, .article1, .article2 {
+        border: 1px solid black;
+        font-size: 30px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sidebar {
+    background-color: rgb(123, 222, 123);
+    grid-area: sidebar;
+    }
+
+    .article1 {
+        grid-area: article1;
+        background-color: rgb(217, 241, 173);
+    }
+    .article2 {
+        grid-area: article2;
+        background-color: rgb(217, 241, 173);
+    }
+    
+    </style>
+<body>
+    <div class="grid">
+        <div class="sidebar"><b>Sidebar</b></div>
+        <div class="article1"><b>Article</b></div>
+        <div class="article2"><b>Article</b></div>
+    </div>
+</body>
+</html>

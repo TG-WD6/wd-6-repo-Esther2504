@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: lightblue;
+        padding: 10px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: [col-start] 300px [col-mid] 1fr [col-end];
+        grid-template-rows: [row-start] 1fr [row-mid] 1fr [row-end];
+        height: 600px;
+    }
+
+    .sidebar, .article1, .article2 {
+        border: 1px solid black;
+        font-size: 30px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .sidebar {
+    background-color: rgb(123, 222, 123);
+    grid-column-start: col-start;
+    grid-row-start: row-start;
+    grid-row-end: row-end;
+    }
+
+    .article1 {
+        background-color: rgb(217, 241, 173);
+        grid-column-start: col-mid;
+        grid-row-start: row-start;
+    }
+    .article2 {
+        background-color: rgb(217, 241, 173);
+        grid-column-start: col-mid;
+        grid-row-start: row-mid;
+    }
+    
+    </style>
+<body>
+    <div class="grid">
+        <div class="sidebar"><b>Sidebar</b></div>
+        <div class="article1"><b>Article</b></div>
+        <div class="article2"><b>Article</b></div>
+    </div>
+</body>
+</html>
