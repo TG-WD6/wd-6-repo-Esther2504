@@ -1,0 +1,64 @@
+.clock {
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    border-radius: 90%;
+    position: relative;
+}
+
+.clock__minutes {
+    height: 70px;
+    width: 5px;
+    background-color: white;
+    position: absolute;
+    top: 30px;
+    right: 100px;
+    transform-origin: center bottom;
+    /* animation: clockpointer 3600s steps(60, end) infinite; */
+    /* animation: clockpointer; */
+}
+
+.clock__hours {
+    height: 50px;
+    width: 5px;
+    background-color: white;
+    top: 50px;
+    right: 100px;
+    position: absolute;
+    transform-origin: center bottom;
+    /* animation: clockpointer 43200s steps(60, end) infinite; */
+}
+
+.clock__seconds {
+    height: 70px;
+    width: 4px;
+    background-color: red;
+    position: absolute;
+    top: 30px;
+    right: 100px;
+    /* animation: clockpointer 60s steps(60, end) infinite; */
+    transform-origin: center bottom;
+    animation-iteration-count: infinite;
+}
+
+@keyframes clockpointer {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg)}
+}
+
+#clock__digital {
+    background-color: aquamarine;
+    width: 200px;
+    height: 80px;
+}
+
+.carousel img {
+    width: 400px;
+    height: 400px;
+}
+
+.left-arrow {
+    height: 400px;
+    width: 50px;
+    background-color: rgb(16, 15, 15, 0.2);
+}
