@@ -76,18 +76,42 @@ setInterval(moveHour, 1000)
 function moveHour() {
     let currentDate = new Date();
     let currentHour = currentDate.getHours()
-    let rotateHour = (currentHour / 60) * 360
+    let rotateHour = (currentHour / 12) * 360
     let hourPointer = document.querySelector(".clock__hours");
     hourPointer.style.transform = "rotate(" + rotateHour + "deg)";
 }
 
-// Als het 1 sec is, moet hij 3 graden draaien. als het 2 sec is, 6 graden, etc.
+// CAROUSEL POGING 1 (Geen loop of smooth transition)
 
-// let currentDate = new Date();
-// let currentHour = currentDate.getHours()
-// let currentMinute = currentDate.getMinutes()
-// let currentSecond = currentDate.getSeconds()
+let image = document.getElementById("carousel__img")
 
-// let rotateSeconds = (currentSecond/60) * 360
-// let rotateMinute = (currentMinute/60) * 360
-// let rotateHour = (currentHour/60) * 360
+function changeImageLeft() {
+    if (image.getAttribute('src') == "carousel-hamster.jpg") {
+        image.src = "carousel-rabbit.jpg";
+    } else if (image.getAttribute('src') == "carousel-rabbit.jpg") {
+        image.src = "carousel-squirrel.jpg"
+    } else if (image.getAttribute('src') == "carousel-squirrel.jpg") {
+        image.src = "carousel-hamster.jpg"
+    }
+}
+
+function changeImageRight() {
+    if (image.getAttribute('src') == "carousel-hamster.jpg") {
+        image.src = "carousel-squirrel.jpg";
+    } else if (image.getAttribute('src') == "carousel-squirrel.jpg") {
+        image.src = "carousel-rabbit.jpg"
+    } else if (image.getAttribute('src') == "carousel-rabbit.jpg") {
+        image.src = "carousel-hamster.jpg"
+    }
+}
+
+// CAROUSEL POGING 2
+// let imagesArray = [
+//     "carousel-hamster.jpg",
+//     "carousel-rabbit.jpg",
+//     "carousel-squirrel.jpg"
+// ]
+
+// for (i = 0; i < imagesArray.length; i++) {
+//  if (imagesArray[i] ===)
+//     }

@@ -42,8 +42,6 @@ let people = [
 
 ]
 
-// console.log(JSON.stringify(people)[0].age)
-
 // people.forEach(person => {
 //     console.log(person.name, person.age)
 // }

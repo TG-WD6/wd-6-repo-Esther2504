@@ -52,13 +52,47 @@
     height: 80px;
 }
 
+.carousel {
+    position: relative; 
+
+}
+
 .carousel img {
     width: 400px;
     height: 400px;
+    border-radius: 5%;
+}
+
+.carousel__image {
+    position: absolute;
+}
+
+.left-arrow, .right-arrow {
+    height: 400px;
+    width: 50px;
+    background-color: rgb(16, 15, 15, 0.1);
+    position: absolute; 
+    top: 0px;
+    cursor: grab;
 }
 
 .left-arrow {
-    height: 400px;
-    width: 50px;
-    background-color: rgb(16, 15, 15, 0.2);
+    border-radius: 0.6em 0 0 0.6em;
 }
+
+.right-arrow {
+    left: 350px;
+    border-radius: 0 1em 1em 0;
+}
+
+.left-arrow, .right-arrow p {
+font-size: 2em;
+color: white;
+text-align: center;
+line-height: 340px;
+}
+
+.left-arrow:hover, .right-arrow:hover {
+    background-color: rgb(16, 15, 15, 0.5);
+}
+

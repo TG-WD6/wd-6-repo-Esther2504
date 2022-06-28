@@ -9,18 +9,23 @@
     <script src="script.js" defer></script>
 </head>
 <body>
+    <h1>Clock</h1>
     <div class="clock">
         <div class="clock__minutes"></div>
         <div class="clock__hours"></div>
         <div class="clock__seconds"></div>
     </div>
     <div id="clock__digital"></div>
-
+<h1>Carousel</h1>
     <div class="carousel">
-        <img src="carousel-rabbit.jpg">
-        <img src="carousel-hamster.jpg">
-        <img src="carousel-squirrel.jpg">
-        <div class="left-arrow"><p>< </p></div>
+    <div class="carousel__image">
+        <img id="carousel__img" src="carousel-rabbit.jpg">
+    </div> 
+        <div class="left-arrow" onclick="changeImageLeft()"><p> < </p></div>
+        <div class="right-arrow" onclick="changeImageRight()"><p> > </p></div>
     </div>
+<h1>JSON cards</h1>
+
+
 </body>
 </html>
