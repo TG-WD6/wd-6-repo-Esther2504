@@ -24,18 +24,64 @@
 // promise.then()
 
 
-const getData = async() => (await fetch('./countries.json')).json();
+const getData = async() => (await fetch('./allcountries.json')).json();
 
 getData()
   .then(data => {
+let optionfilter = document.getElementById("continents").value;
+if (optionfilter === "none") { 
+
+
     for (let item of data) {
-      toAppend.innerHTML += `
+      // var filtered = data.filter(item => item.continent == "Europe");
+
+      cards.innerHTML += `
 
 <div class="card">
-<p>Country: ${item.country}</p>
-<p>City: ${item.city}</p>
+<p>Official: ${item.name.official}</p>
+<p>Capital: ${item.capital}</p>
+<p>Continent: ${item.region}</p>
+<p>Subregion: ${item.subregion}</p>
 </div>
 
 `;
     }
+    for (let item of data) {
+      cardnames.innerHTML += `
+
+<div class="frontcard">
+<p>${item.name.common}</p>
+</div>
+
+`;
+}
+    } else {
+
+      data = data.filter(item => item.continent === "Europe")
+      console.log(data)
+    
+      for (let item of data) {
+     
+        cards.innerHTML += `
+  
+  <div class="card">
+  <p>Official: ${item.name.official}</p>
+  <p>Capital: ${item.capital}</p>
+  <p>Continent: ${item.region}</p>
+  <p>Subregion: ${item.subregion}</p>
+  </div>
+  
+  `;
+      }
+      for (let item of data) {
+        cardnames.innerHTML += `
+  
+  <div class="frontcard">
+  <p>${item.capital}</p>
+  </div>
+  
+  `;
+  }
+    }
   });
+  

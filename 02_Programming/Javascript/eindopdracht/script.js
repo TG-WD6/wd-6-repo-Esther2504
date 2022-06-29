@@ -83,35 +83,49 @@ function moveHour() {
 
 // CAROUSEL POGING 1 (Geen loop of smooth transition)
 
-let image = document.getElementById("carousel__img")
+// let image = document.getElementById("carousel__img")
 
-function changeImageLeft() {
-    if (image.getAttribute('src') == "carousel-hamster.jpg") {
-        image.src = "carousel-rabbit.jpg";
-    } else if (image.getAttribute('src') == "carousel-rabbit.jpg") {
-        image.src = "carousel-squirrel.jpg"
-    } else if (image.getAttribute('src') == "carousel-squirrel.jpg") {
-        image.src = "carousel-hamster.jpg"
-    }
-}
+// function changeImageLeft() {
+//     if (image.getAttribute('src') == "carousel-hamster.jpg") {
+//         image.src = "carousel-rabbit.jpg";
+//     } else if (image.getAttribute('src') == "carousel-rabbit.jpg") {
+//         image.src = "carousel-squirrel.jpg"
+//     } else if (image.getAttribute('src') == "carousel-squirrel.jpg") {
+//         image.src = "carousel-hamster.jpg"
+//     }
+// }
 
-function changeImageRight() {
-    if (image.getAttribute('src') == "carousel-hamster.jpg") {
-        image.src = "carousel-squirrel.jpg";
-    } else if (image.getAttribute('src') == "carousel-squirrel.jpg") {
-        image.src = "carousel-rabbit.jpg"
-    } else if (image.getAttribute('src') == "carousel-rabbit.jpg") {
-        image.src = "carousel-hamster.jpg"
-    }
-}
+// function changeImageRight() {
+//     if (image.getAttribute('src') == "carousel-hamster.jpg") {
+//         image.src = "carousel-squirrel.jpg";
+//     } else if (image.getAttribute('src') == "carousel-squirrel.jpg") {
+//         image.src = "carousel-rabbit.jpg"
+//     } else if (image.getAttribute('src') == "carousel-rabbit.jpg") {
+//         image.src = "carousel-hamster.jpg"
+//     }
+// }
 
 // CAROUSEL POGING 2
-// let imagesArray = [
-//     "carousel-hamster.jpg",
-//     "carousel-rabbit.jpg",
-//     "carousel-squirrel.jpg"
-// ]
+let imagesArray = [
+    "carousel-hamster.jpg",
+    "carousel-rabbit.jpg",
+    "carousel-squirrel.jpg"
+]
 
-// for (i = 0; i < imagesArray.length; i++) {
-//  if (imagesArray[i] ===)
-//     }
+let image = document.getElementById("carousel__img")
+
+
+
+function changeImageRight() {
+    for (i = 0; i < imagesArray.length; i++) {
+        let arrow =     document.getElementById("right-arrow");
+        arrow.click(function () {
+            i = (i + 1) % imagesArray.length;
+           }
+)}}
+
+function changeImageLeft() {
+    for (i = 0; i < imagesArray.length; i--) {
+        if (imagesArray[0] ===)
+           }
+}

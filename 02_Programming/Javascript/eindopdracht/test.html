@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,36 +8,86 @@
     <title>Document</title>
     <script src="json.js"></script>
     <style>
-    .card {
-    width: 200px;
-    height: 200px;
-    background-color: rgb(141, 208, 235);
-    border-radius: 1em;
-    text-align: center;
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-  justify-content: center;
-  flex-wrap: wrap;
-}
+        .card {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(143, 216, 175);;
+            border-radius: 1em;
+            text-align: center;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* flex-wrap: wrap; */
 
-/* .container {
-    display: flex; 
-    width: 600px;
-    flex-wrap: wrap;
-} */
+        }
 
-#toAppend {
-    width: 600px;
-    display: flex;
-    flex-wrap: wrap;
-}
+        p {
+            margin: 0.5em;
+        }
+
+        .frontcard {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(143, 216, 175);
+            border-radius: 0.6em;
+            text-align: center;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-wrap: wrap;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .frontcard:hover {
+            opacity: 0;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        #cards {
+            width: 600px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #cardnames {
+            width: 600px;
+            display: flex;
+            flex-wrap: wrap;
+            position: absolute;
+            top: 0;
+        }
+        .filter-container {
+            display: flex;
+            width: 400px;
+            margin: 10px;
+        }
     </style>
 </head>
+
 <body>
+    <div class="filter-container">
+    <button>Clear</button>
+    <select id="continents">
+        <option value="none">...</option>
+        <option value="Africa">Africa</option>
+        <option value="Americas">Americas</option>
+        <option value="Antartica">Antartica</option>
+        <option value="Asia">Asia</option>
+        <option value="Europe">Europe</option>
+        <option value="Oceania">Oceania</option>
+    </select>
+    <button>Generate</button>
+</div>
     <div class="container">
-        <select></select>
-    <div id="toAppend"></div>
+        <div id="cards"></div>
+        <div id="cardnames"></div>
     </div>
 </body>
+
 </html>
