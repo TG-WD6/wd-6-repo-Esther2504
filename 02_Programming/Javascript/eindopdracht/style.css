@@ -66,7 +66,7 @@
     position: absolute;
 }
 
-.left-arrow, .right-arrow {
+/* .left-arrow, .right-arrow {
     height: 400px;
     width: 50px;
     background-color: rgb(16, 15, 15, 0.1);
@@ -93,5 +93,5 @@ line-height: 340px;
 
 .left-arrow:hover, .right-arrow:hover {
     background-color: rgb(16, 15, 15, 0.5);
-}
+} */
 

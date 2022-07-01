@@ -24,18 +24,18 @@
 // promise.then()
 
 
-const getData = async() => (await fetch('./allcountries.json')).json();
+const getData = async () => (await fetch('./allcountries.json')).json();
+
+// var result = getData.filter((x)=>x.region === "Europe");
+// console.log(result);
 
 getData()
   .then(data => {
-let optionfilter = document.getElementById("continents").value;
-if (optionfilter === "none") { 
-
-
-    for (let item of data) {
-      // var filtered = data.filter(item => item.continent == "Europe");
-
-      cards.innerHTML += `
+    let optionfilter = document.getElementById("continents").value;
+    if (optionfilter === "none") {
+      for (let item of data) {
+        // item.region.filter(region => region === 'Europe');
+        cards.innerHTML += `
 
 <div class="card">
 <p>Official: ${item.name.official}</p>
@@ -45,23 +45,23 @@ if (optionfilter === "none") {
 </div>
 
 `;
-    }
-    for (let item of data) {
-      cardnames.innerHTML += `
+      }
+      for (let item of data) {
+        cardnames.innerHTML += `
 
 <div class="frontcard">
 <p>${item.name.common}</p>
 </div>
 
 `;
-}
+      }
     } else {
 
-      data = data.filter(item => item.continent === "Europe")
-      console.log(data)
-    
+      // data = data.filter(item => item.continent === "Europe")
+      // console.log(data)
+
       for (let item of data) {
-     
+
         cards.innerHTML += `
   
   <div class="card">
@@ -81,7 +81,8 @@ if (optionfilter === "none") {
   </div>
   
   `;
-  }
+      }
     }
   });
-  
+
+

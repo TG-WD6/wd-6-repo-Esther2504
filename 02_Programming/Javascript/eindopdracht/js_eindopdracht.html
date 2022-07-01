@@ -7,6 +7,8 @@
     <title>Javascript eindopdracht</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <script src="carousel.js" defer></script>
+    <link rel="stylesheet" href="carousel.css">
 </head>
 <body>
     <h1>Clock</h1>
@@ -15,17 +17,28 @@
         <div class="clock__hours"></div>
         <div class="clock__seconds"></div>
     </div>
-    <div id="clock__digital"></div>
 <h1>Carousel</h1>
-    <div class="carousel">
+    <!-- <div class="carousel">
     <div class="carousel__image">
         <img id="carousel__img" src="carousel-rabbit.jpg">
     </div> 
         <div class="left-arrow" id="left-arrow" onclick="changeImageLeft()"><p> < </p></div>
         <div class="right-arrow" id="right-arrow" onclick="changeImageRight()"><p> > </p></div>
-    </div>
+    </div> -->
 
 
+    <div class="carousel-container">
+        <div class="carousel-slider">
+            <img class="carousel__img" id="last-image" src="carousel-squirrel.jpg">
+            <img class="carousel__img" src="carousel-rabbit.jpg">
+            <img class="carousel__img" src="carousel-hamster.jpg">
+            <img class="carousel__img" src="carousel-squirrel.jpg">
+            <img class="carousel__img" id="first-image" src="carousel-rabbit.jpg">
+        </div> 
+    
+            <button class="left-arrow" onclick="slideLeft()"> <img src="left-arrow.svg"></button>
+            <button class="right-arrow" onclick="slideRight()"><img src="right-arrow.svg"></button>
+        </div>
 
 </body>
 </html>

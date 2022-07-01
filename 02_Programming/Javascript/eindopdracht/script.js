@@ -39,18 +39,18 @@ function move() {
 
 // Loop die elke seconde de wijzer laat verplaatsen?
 */
-setInterval(Timer, 1000);
 
-function Timer() {
-    let currentDate = new Date();
-    let currentHour = currentDate.getHours()
-    let currentMinute = currentDate.getMinutes()
-    let currentSecond = currentDate.getSeconds()
+// setInterval(Timer, 1000);
 
-    let time = currentHour + ":" + currentMinute + ":" + currentSecond
-    let myDiv = document.getElementById("clock__digital")
-    myDiv.innerText = time
-}
+// function Timer() {
+//     let currentDate = new Date();
+//     let currentHour = currentDate.getHours()
+//     let currentMinute = currentDate.getMinutes()
+//     let currentSecond = currentDate.getSeconds()
+//     let time = currentHour + ":" + currentMinute + ":" + currentSecond
+//     let myDiv = document.getElementById("clock__digital")
+//     myDiv.innerText = time
+// }
 
 
 setInterval(moveSeconds, 1000)
@@ -76,7 +76,8 @@ setInterval(moveHour, 1000)
 function moveHour() {
     let currentDate = new Date();
     let currentHour = currentDate.getHours()
-    let rotateHour = (currentHour / 12) * 360
+    let currentMinute = currentDate.getMinutes()
+    let rotateHour = ((currentHour + "." + currentMinute) / 12) * 360
     let hourPointer = document.querySelector(".clock__hours");
     hourPointer.style.transform = "rotate(" + rotateHour + "deg)";
 }
