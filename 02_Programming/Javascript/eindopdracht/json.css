@@ -1,0 +1,68 @@
+#infocards {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(143, 216, 175);
+    border-radius: 1em;
+    text-align: center;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+p {
+    margin: 0.5em;
+}
+
+#frontcard {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(143, 216, 175);
+    border-radius: 0.6em;
+    text-align: center;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#frontcard:hover {
+    opacity: 0;
+}
+
+.container {
+    position: relative;
+    overflow: hidden;
+}
+
+#cards {
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+#cardnames {
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 0;
+}
+
+.filter-container {
+    display: flex;
+    width: 250px;
+    margin: 10px;
+    justify-content: space-around;
+}
+
+#amount {
+    border: 1px solid black;
+    width: 50px;
+    text-align: center;
+}

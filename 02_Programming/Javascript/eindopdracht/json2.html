@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #infocards {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(143, 216, 175);
+            ;
+            border-radius: 1em;
+            text-align: center;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        p {
+            margin: 0.5em;
+        }
+
+        #frontcard {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(143, 216, 175);
+            border-radius: 0.6em;
+            text-align: center;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-wrap: wrap;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        #frontcard:hover {
+            opacity: 0;
+        }
+
+        .container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        #cards {
+            width: 600px;
+            display: flex;
+            flex-wrap: wrap;
+            overflow: hidden;
+        }
+
+        #cardnames {
+            width: 600px;
+            display: flex;
+            flex-wrap: wrap;
+            position: absolute;
+            top: 0;
+        }
+
+        .filter-container {
+            display: flex;
+            width: 250px;
+            margin: 10px;
+            justify-content: space-around;
+        }
+
+        #amount {
+            border: 1px solid black;
+            width: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="filter-container">
+    <button id="clear">Clear</button>
+    <div id="amount">250</div>
+    <select id="continents">
+        <option value="none">...</option>
+        <option value="Africa">Africa</option>
+        <option value="Americas">Americas</option>
+        <option value="Antartica">Antartica</option>
+        <option value="Asia">Asia</option>
+        <option value="Europe">Europe</option>
+        <option value="Oceania">Oceania</option>
+    </select>
+    <button id="generate">Generate</button>
+</div>
+    <div class="container">
+        <div id="cards"></div>
+        <div id="cardnames"></div>
+    </div>
+
+    <script>
+        const getData = async () => (await fetch('./allcountries.json')).json();
+
+        getData()
+            .then(data => {
+
+                var data_europe = data.filter( element => element.region == "Europe")
+console.log(data_europe)
+                var data_asia = data.filter( element => element.region == "Asia")
+console.log(data_asia)
+                var data_antartica = data.filter( element => element.region == "Antarctic")
+console.log(data_antartica)
+                var data_americas = data.filter( element => element.region == "Americas")
+console.log(data_americas)
+                var data_africa = data.filter( element => element.region == "Africa")
+console.log(data_africa)
+                var data_oceania = data.filter( element => element.region == "Oceania")
+console.log(data_oceania)
+
+for (let item of data) {
+                    let carddiv = document.createElement("div");
+                    carddiv.id = "infocards";
+                    carddiv.setAttribute('style', 'white-space: pre-line;');
+                    carddiv.textContent = `Official: ${item.name.official} \r\n`
+                    carddiv.textContent += `Capital: ${item.capital} \r\n`;
+                    carddiv.textContent += `Continent: ${item.region} \r\n`;
+                    carddiv.textContent += `Subregion: ${item.subregion}`;
+                    document.getElementById('cards').appendChild(carddiv);
+                }
+
+                for (let item of data) {
+                    let frontcard = document.createElement("div");
+                    frontcard.id = "frontcard";
+                    frontcard.textContent = item.name.common;
+                    document.getElementById('cardnames').appendChild(frontcard)
+                }
+                document.getElementById('clear').addEventListener('click', function() {
+                    document.getElementById('cards').textContent = "";
+                document.getElementById('cardnames').textContent = "";
+                document.getElementById('amount').innerText = data.length;
+                document.getElementById('continents').value = "none";
+                    for (let item of data) {
+                    let carddiv = document.createElement("div");
+                    carddiv.id = "infocards";
+                    carddiv.setAttribute('style', 'white-space: pre-line;');
+                    carddiv.textContent = `Official: ${item.name.official} \r\n`
+                    carddiv.textContent += `Capital: ${item.capital} \r\n`;
+                    carddiv.textContent += `Continent: ${item.region} \r\n`;
+                    carddiv.textContent += `Subregion: ${item.subregion}`;
+                    document.getElementById('cards').appendChild(carddiv);
+                }
+
+                for (let item of data) {
+                    let frontcard = document.createElement("div");
+                    frontcard.id = "frontcard";
+                    frontcard.textContent = item.name.common;
+                    document.getElementById('cardnames').appendChild(frontcard)
+                }
+                })
+    document.getElementById('generate').addEventListener('click', function() {
+ 
+let optionfilter = document.getElementById("continents");
+// var option2 = optionfilter.options[optionfilter.selectedIndex].value;
+console.log(optionfilter.value);
+
+// if (optionfilter.value === "none") {
+//     document.getElementById('amount').innerText = data.length;
+//     document.getElementById('cards').textContent = "";
+//                 document.getElementById('cardnames').textContent = "";
+//    ;
+//                 for (let item of data) {
+//                     let carddiv = document.createElement("div");
+//                     carddiv.id = "infocards";
+//                     carddiv.setAttribute('style', 'white-space: pre-line;');
+//                     carddiv.textContent = `Official: ${item.name.official} \r\n`
+//                     carddiv.textContent += `Capital: ${item.capital} \r\n`;
+//                     carddiv.textContent += `Continent: ${item.region} \r\n`;
+//                     carddiv.textContent += `Subregion: ${item.subregion}`;
+//                     document.getElementById('cards').appendChild(carddiv);
+//                 }
+
+//                 for (let item of data) {
+//                     let frontcard = document.createElement("div");
+//                     frontcard.id = "frontcard";
+//                     frontcard.textContent = item.name.common;
+//                     document.getElementById('cardnames').appendChild(frontcard)
+//                 }
+             if (optionfilter.value === "Africa") {
+                document.getElementById('amount').innerText = data_africa.length;
+                document.getElementById('cards').textContent = "";
+                document.getElementById('cardnames').textContent = "";
+                for (let item of data_africa) {
+            
+                    let carddiv = document.createElement("div");
+                    carddiv.id = "infocards";
+                    carddiv.setAttribute('style', 'white-space: pre-line;');
+                    carddiv.textContent = `Official: ${item.name.official} \r\n`
+                    carddiv.textContent += `Capital: ${item.capital} \r\n`;
+                    carddiv.textContent += `Continent: ${item.region} \r\n`;
+                    carddiv.textContent += `Subregion: ${item.subregion}`;
+                    document.getElementById('cards').appendChild(carddiv);
+                    
+                    
+                }
+
+                for (let item of data_africa) {
+                    
+                    let frontcard = document.createElement("div");
+                    frontcard.id = "frontcard";
+                    frontcard.textContent = item.name.common;
+                    document.getElementById('cardnames').appendChild(frontcard)
+                }
+            }  else if (optionfilter.value === "Americas") {
+                document.getElementById('amount').innerText = data_americas.length;
+                document.getElementById('cards').textContent = "";
+                document.getElementById('cardnames').textContent = "";
+                for (let item of data_americas) {
+                    let carddiv = document.createElement("div");
+                    carddiv.id = "infocards";
+                    carddiv.setAttribute('style', 'white-space: pre-line;');
+                    carddiv.textContent = `Official: ${item.name.official} \r\n`
+                    carddiv.textContent += `Capital: ${item.capital} \r\n`;
+                    carddiv.textContent += `Continent: ${item.region} \r\n`;
+                    carddiv.textContent += `Subregion: ${item.subregion}`;
+                    document.getElementById('cards').appendChild(carddiv);
+                }
+
+                for (let item of data_americas) {
+                    let frontcard = document.createElement("div");
+                    frontcard.id = "frontcard";
+                    frontcard.textContent = item.name.common;
+                    document.getElementById('cardnames').appendChild(frontcard)
+                }
+            }  else if (optionfilter.value === "Antartica") {
+                document.getElementById('amount').innerText = data_antartica.length;
+                document.getElementById('cards').textContent = "";
+                document.getElementById('cardnames').textContent = "";
+                for (let item of data_antartica) {
+                    let carddiv = document.createElement("div");
+                    carddiv.id = "infocards";
+                    carddiv.setAttribute('style', 'white-space: pre-line;');
+                    carddiv.textContent = `Official: ${item.name.official} \r\n`
+                    carddiv.textContent += `Capital: ${item.capital} \r\n`;
+                    carddiv.textContent += `Continent: ${item.region} \r\n`;
+                    carddiv.textContent += `Subregion: ${item.subregion}`;
+                    document.getElementById('cards').appendChild(carddiv);
+                }
+
+                for (let item of data_antartica) {
+                    let frontcard = document.createElement("div");
+                    frontcard.id = "frontcard";
+                    frontcard.textContent = item.name.common;
+                    document.getElementById('cardnames').appendChild(frontcard)
+                }
+            }  else if (optionfilter.value === "Asia") {
+                document.getElementById('amount').innerText = data_asia.length;
+                document.getElementById('cards').textContent = "";
+                document.getElementById('cardnames').textContent = "";
+                for (let item of data_asia) {
+                    let carddiv = document.createElement("div");
+                    carddiv.id = "infocards";
+                    carddiv.setAttribute('style', 'white-space: pre-line;');
+                    carddiv.textContent = `Official: ${item.name.official} \r\n`
+                    carddiv.textContent += `Capital: ${item.capital} \r\n`;
+                    carddiv.textContent += `Continent: ${item.region} \r\n`;
+                    carddiv.textContent += `Subregion: ${item.subregion}`;
+                    document.getElementById('cards').appendChild(carddiv);
+                }
+
+                for (let item of data_asia) {
+                    let frontcard = document.createElement("div");
+                    frontcard.id = "frontcard";
+                    frontcard.textContent = item.name.common;
+                    document.getElementById('cardnames').appendChild(frontcard)
+                }
+            }  else if (optionfilter.value === "Europe") {
+                document.getElementById('amount').innerText = data_europe.length;
+                document.getElementById('cards').textContent = "";
+                document.getElementById('cardnames').textContent = "";
+                for (let item of data_europe) {
+                    let carddiv = document.createElement("div");
+                    carddiv.id = "infocards";
+                    carddiv.setAttribute('style', 'white-space: pre-line;');
+                    carddiv.textContent = `Official: ${item.name.official} \r\n`
+                    carddiv.textContent += `Capital: ${item.capital} \r\n`;
+                    carddiv.textContent += `Continent: ${item.region} \r\n`;
+                    carddiv.textContent += `Subregion: ${item.subregion}`;
+                    document.getElementById('cards').appendChild(carddiv);
+                }
+
+                for (let item of data_europe) {
+                    let frontcard = document.createElement("div");
+                    frontcard.id = "frontcard";
+                    frontcard.textContent = item.name.common;
+                    document.getElementById('cardnames').appendChild(frontcard)
+                }
+            }  else if (optionfilter.value === "Oceania") {
+                document.getElementById('amount').innerText = data_oceania.length;
+                document.getElementById('cards').textContent = "";
+                document.getElementById('cardnames').textContent = "";
+                for (let item of data_oceania) {
+                    let carddiv = document.createElement("div");
+                    carddiv.id = "infocards";
+                    carddiv.setAttribute('style', 'white-space: pre-line;');
+                    carddiv.textContent = `Official: ${item.name.official} \r\n`
+                    carddiv.textContent += `Capital: ${item.capital} \r\n`;
+                    carddiv.textContent += `Continent: ${item.region} \r\n`;
+                    carddiv.textContent += `Subregion: ${item.subregion}`;
+                    document.getElementById('cards').appendChild(carddiv);
+                }
+
+                for (let item of data_oceania) {
+                    let frontcard = document.createElement("div");
+                    frontcard.id = "frontcard";
+                    frontcard.textContent = item.name.common;
+                    document.getElementById('cardnames').appendChild(frontcard)
+                }
+            }
+})
+            });
+    </script>
+</body>
+
+</html>
+
+<!-- Niet elke keer weer die loop aanmaken, maar een variable die per continent verandert?? -->
