@@ -1,0 +1,67 @@
+body {
+    background-color: #90ED90;
+}
+
+#form {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+#form-container {
+    width: 500px;
+    height: 200px;
+    background-color: lightgray;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+align-items: center;
+}
+
+#usercomment {
+    width: 100%;
+    height: 60%;
+}
+
+#user-container {
+    width: 100%;
+display: flex;
+flex-direction: row;
+margin-top: 1rem;
+}
+
+#commentid {
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    background-color: white;
+left: 22%;
+    margin-top: 10px;
+    box-sizing: border-box;
+    padding: 2%;
+}
+
+#userid {
+    position: relative;
+    width: 22%;
+    height: 200px;
+    background-color: blanchedalmond;
+    box-sizing: border-box;
+    display: flex;
+    padding: 20px;
+    flex-direction: column-reverse;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#userphoto {
+    width: 90%;
+    border-radius: 0.5rem;
+    position: relative;
+    align-self: center;
+}
+

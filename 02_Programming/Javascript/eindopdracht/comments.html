@@ -7,104 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="comments.js" defer></script>
-    <style>
-        body {
-            background-color: rgb(122, 214, 134);
-        }
-
-        .comment-container {
-            width: 600px;
-            height: 200px;
-            background-color: blanchedalmond;
-            border-radius: 1rem;
-            margin: 10px;
-            position: relative;
-            top: -100px;
-        }
-
-        .input-container {
-            width: 600px;
-            height: 200px;
-            background-color: lightgray;
-            border-radius: 1rem;
-            margin: 10px;
-            display: flex;
-            flex-direction: column;
-            /* position: relative; */
-            text-align: center;
-        }
-
-        .user-comment {
-            margin: auto;
-            width: 500px;
-            height: 110px;
-        }
-
-        .submit-container {
-            margin: auto;
-
-        }
-
-        #commentid {
-            width: 440px;
-            height: 200px;
-            background-color: white;
-            border-radius: 1rem;
-            /* margin: 10px; */
-            /* display: flex; */
-            /* justify-self: flex-start;  */
-            position: relative;
-            top: -210px;
-            left: 170px;
-            z-index: 2;
-            box-sizing: border-box;
-            padding: 20px;
-        }
-
-        #userid {
-            width: 600px;
-            height: 200px;
-            background-color: blanchedalmond;
-            border-radius: 1rem;
-            margin: 10px;
-            /* position: relative;
-            top: 0px; */
-            box-sizing: border-box;
-            /* padding: 50px 20px 20px 65px; */
-            display: flex;
-            padding: 20px;
-            flex-direction: column-reverse;
-            text-align:left;
-        }
-
-        #userphoto {
-            width: 130px;
-            /* position: relative;
-            top: -40px;
-            left: -68px; */
-            /* top: -2rem;
-            right: 35px; */
-            z-index: 3;
-            border-radius: 0.5rem;
-        }
-
-        /* AFBLIJVEN */
-        #containerid {
-            position: absolute;
-            width: 600px;
-            /* height: 200px; */
-            background-color: blanchedalmond;
-            border-radius: 1rem;
-            opacity: 0;
-            font-size: larger;
-        }
-        #replybutton {
-            position: absolute;
-            top: 150px;
-            left: 340px;
-        }
-
-    </style>
+<link rel="stylesheet" href="comments.css">
 </head>
 
 <body>
@@ -116,25 +19,13 @@
         <div class="submit-container">
             <input type="text" required class="user-name">
             <!-- <input type="file" class="user-image" accept="image/*"> -->
-            <button onclick="submitComment()">Submit</button>
+            <button id="submitButton" onclick="submitComment()">Submit</button>
         </div>
-        
+  
     </div>
 
 </div>
-<!-- Voor de reply option, een functie die een nieuwe inputcontainer maakt on top of oude container -->
-<!-- Naar deze code kijken: function changeText(text) {
-   // get elements involved with the text change
-   var div = document.getElementById("title");
-   var anchor = div.children[0];
 
-   // first, remove the anchor
-   div.removeChild(anchor);
-   // then, change the text
-   div.innerText = text;
-   // last, reappend the anchor
-   div.appendChild(anchor);
-} -->
 </body>
 
 </html>

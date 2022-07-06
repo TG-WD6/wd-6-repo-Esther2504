@@ -31,19 +31,34 @@ function submitComment() {
     newComment.textContent = userComment;
     replyButton.textContent = "Reply";
 
-    // Reply button function
-    replyButton.onclick = function () {
-        let inputcont = document.querySelector(".input-container");
-        inputcont.firstChild.textContent = "Replying to " + userName;
-        
-        let newComment = document.createElement("div")
-        inputcont.parentNode.insertBefore(newComment, inputcont);
-
-    }
-
     // Button
     newComment.appendChild(replyButton)
     inputcont.parentNode.insertBefore(newComment, inputcont);
 
-
+    // Reply button function
+    replyButton.onclick = function () {
+        let inputcont = document.querySelector(".input-container");
+        inputcont.firstChild.textContent = "Replying to " + userName;
+        let submitReply = document.createElement("button");
+        submitReply.textContent = "Submit"
+        inputcont.appendChild(submitReply);
+        submitReply.onclick = function () {
+            let replyUser = document.createElement("div")
+            replyUser.id = "userid";
+        
+            let replyImg = document.createElement("img");
+            replyImg.src = "carousel-hamster.jpg";
+            replyImg.id = "userphoto";
+            let replyUsername = document.querySelector(".user-name").value;
+            replyUser.textContent = replyUsername;
+            replyUser.appendChild(replyImg)
+            inputcont.parentNode.insertBefore(replyUser, inputcont);
+        
+            let userComment = document.querySelector(".user-comment").value;
+            let replyComment = document.createElement("div");
+            replyComment.id = "commentid";
+            replyComment.innerHTML = `<a>Replying to ${userName}</a><p>${userComment}</p>`
+            inputcont.parentNode.insertBefore(replyComment, inputcont);
+        }
+    }
 } 
