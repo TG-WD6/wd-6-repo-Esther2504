@@ -1,14 +1,16 @@
+
 #infocards {
     width: 200px;
     height: 200px;
-    background-color: rgb(143, 216, 175);
-    border-radius: 1em;
+    background-color: rgb(52,71,125);
+    border-radius: 0.9rem;
     text-align: center;
     border: 1px solid black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
+    color: white;
 }
 
 p {
@@ -18,8 +20,9 @@ p {
 #frontcard {
     width: 200px;
     height: 200px;
-    background-color: rgb(143, 216, 175);
-    border-radius: 0.6em;
+    background-image: url("globebackground.jpg");
+    background-size: 200px;
+    border-radius: 0.9rem;
     text-align: center;
     border: 1px solid black;
     display: flex;
@@ -28,6 +31,9 @@ p {
     flex-wrap: wrap;
     font-size: 1.5em;
     font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 8px black;
+    transition: all 0.5s ease;
 }
 
 #frontcard:hover {
@@ -37,17 +43,20 @@ p {
 .container {
     position: relative;
     overflow: hidden;
+    /* margin: 0 auto; */
+    display: flex;
+    justify-content: center;
 }
 
 #cards {
-    width: 600px;
+    width: 410px;
     display: flex;
     flex-wrap: wrap;
     overflow: hidden;
 }
 
 #cardnames {
-    width: 600px;
+    width: 410px;
     display: flex;
     flex-wrap: wrap;
     position: absolute;
@@ -56,10 +65,12 @@ p {
 
 .filter-container {
     display: flex;
-    width: 250px;
-    margin: 10px;
-    justify-content: space-around;
+    width: 300px;
+    margin: 0 auto;
+    justify-content: space-between;
+    margin-bottom: 1rem;
 }
+
 
 #amount {
     border: 1px solid black;
