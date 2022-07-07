@@ -11,10 +11,12 @@
 <body>
     <div id="form-container">
     <form id="form">
+        <p id="replyText"></p>
+        <p id="removeText"></p>
         <textarea name="usercomment" id="usercomment"></textarea>
         <div id="user-container">
             <input type="text" name="username" id="username" required></input>
-            <input type="submit" onclick="return addComment()"></input>
+            <input type="submit" onclick="return addComment()" id="button"></input>
     </div>
     </form>
 

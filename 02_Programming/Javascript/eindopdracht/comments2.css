@@ -12,14 +12,14 @@ body {
 }
 
 #form-container {
-    width: 500px;
+    width: 550px;
     height: 200px;
     background-color: lightgray;
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
     text-align: center;
-align-items: center;
+    align-items: center;
 }
 
 #usercomment {
@@ -29,25 +29,26 @@ align-items: center;
 
 #user-container {
     width: 100%;
-display: flex;
-flex-direction: row;
-margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
 }
 
 #commentid {
     position: absolute;
-    width: 400px;
+    width: 350px;
     height: 200px;
     background-color: white;
-left: 22%;
+    left: 15%;
     margin-top: 10px;
     box-sizing: border-box;
     padding: 2%;
+    border-radius: 0 1rem 1rem 0;
 }
 
 #userid {
     position: relative;
-    width: 22%;
+    width: 15%;
     height: 200px;
     background-color: blanchedalmond;
     box-sizing: border-box;
@@ -56,12 +57,38 @@ left: 22%;
     flex-direction: column-reverse;
     text-align: center;
     margin-top: 10px;
+    border-radius: 1rem 0 0 1rem;
 }
 
 #userphoto {
-    width: 90%;
+    width: 70%;
     border-radius: 0.5rem;
-    position: relative;
-    align-self: center;
+    position: absolute;
+top: 10%;
+left: 15%;
 }
 
+#replybutton {
+    display: flex;
+    align-self: flex-end;
+    position: absolute;
+    top: 80%;
+    left: 80%;
+}
+
+#replyText {
+position: absolute;
+left: 3%;
+top: 0;
+}
+
+#removeText {
+position: absolute;
+left: 40%;
+top: 0;
+cursor: pointer;
+}
+
+#removeText:hover {
+    font-weight: bold;
+}
