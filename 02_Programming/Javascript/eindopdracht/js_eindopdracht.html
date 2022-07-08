@@ -4,41 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript eindopdracht</title>
+    <title>Clock</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-    <script src="carousel.js" defer></script>
-    <link rel="stylesheet" href="carousel.css">
 </head>
 <body>
-    <h1>Clock</h1>
+    <nav>
+        <ul>
+            <a href="./js_eindopdracht.html">Clock</a>
+            <a href="./json.html">JSON Cards</a>
+            <a href="./carousel.html">Carousel</a>
+            <a href="./comments.html">Comments</a>
+            <a href="./searchbar.html">Search</a>
+        </ul>
+    </nav>
     <div class="clock">
         <div class="clock__minutes"></div>
         <div class="clock__hours"></div>
         <div class="clock__seconds"></div>
     </div>
-<h1>Carousel</h1>
-    <!-- <div class="carousel">
-    <div class="carousel__image">
-        <img id="carousel__img" src="carousel-rabbit.jpg">
-    </div> 
-        <div class="left-arrow" id="left-arrow" onclick="changeImageLeft()"><p> < </p></div>
-        <div class="right-arrow" id="right-arrow" onclick="changeImageRight()"><p> > </p></div>
-    </div> -->
-
-
-    <div class="carousel-container">
-        <div class="carousel-slider">
-            <img class="carousel__img" id="last-image" src="carousel-squirrel.jpg">
-            <img class="carousel__img" src="carousel-rabbit.jpg">
-            <img class="carousel__img" src="carousel-hamster.jpg">
-            <img class="carousel__img" src="carousel-squirrel.jpg">
-            <img class="carousel__img" id="first-image" src="carousel-rabbit.jpg">
-        </div> 
-    
-            <button class="left-arrow" onclick="slideLeft()"> <img src="left-arrow.svg"></button>
-            <button class="right-arrow" onclick="slideRight()"><img src="right-arrow.svg"></button>
-        </div>
-
+    <div id="clock__digital"></div>
 </body>
 </html>

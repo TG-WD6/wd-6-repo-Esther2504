@@ -1,64 +1,97 @@
-function submitComment() {
-    // Naam en comment van de user ophalen
-    let inputcont = document.querySelector(".input-container");
-    let userName = document.querySelector(".user-name").value;
+function addComment() {
 
-    // Onzichtbare container voor het positioneren van de nieuwe comments
-    let newContainer = document.createElement("div")
-    newContainer.id = "containerid";
-    inputcont.parentNode.insertBefore(newContainer, inputcont);
+    let userComment = document.getElementById("usercomment").value;
+    let userName = document.getElementById("username").value;
 
-    // Nieuw element met de username en een img maken
+    if (userName === "" || userComment === "") {
+        alert("Please fill in both your name and comment")
+    }  else {
+
+    // inhoud comment plaatsen
+    let newComment = document.createElement("div")
+    newComment.id = "commentid";
+    newComment.textContent = userComment;
+    document.body.appendChild(newComment)
+
+    // username en image
     let newUser = document.createElement("div")
     newUser.id = "userid";
+    newUser.textContent = userName;
+    document.body.appendChild(newUser);
 
     let img = document.createElement("img");
     img.src = "carousel-hamster.jpg";
     img.id = "userphoto";
-    // inputcont.parentNode.insertBefore(img, inputcont);
+    newUser.appendChild(img);
 
-    newUser.textContent = userName;
-    // document.body.appendChild(newUser)
-    newUser.appendChild(img)
-    inputcont.parentNode.insertBefore(newUser, inputcont);
-
-    // Inhoud comment
-    let userComment = document.querySelector(".user-comment").value;
-    let newComment = document.createElement("div")
+    // reply button
     let replyButton = document.createElement("button");
     replyButton.id = "replybutton"
-    newComment.id = "commentid";
-    newComment.textContent = userComment;
     replyButton.textContent = "Reply";
+    newComment.appendChild(replyButton);
 
-    // Button
-    newComment.appendChild(replyButton)
-    inputcont.parentNode.insertBefore(newComment, inputcont);
-
-    // Reply button function
+    // reply function
     replyButton.onclick = function () {
-        let inputcont = document.querySelector(".input-container");
-        inputcont.firstChild.textContent = "Replying to " + userName;
+        let replyText = document.querySelector("#replyText");
+
+        replyText.textContent = "Replying to " + userName;
+
+        let removeText = document.querySelector("#removeText");
+        removeText.textContent = "X";
+
+        let submitreplybtn = document.querySelector("#submitreplybtn");
+
+        removeText.addEventListener("click", function () {
+            replyText.textContent = "";
+            removeText.textContent = "";
+            submitreplybtn.textContent = ""
+        });
+
         let submitReply = document.createElement("button");
+        submitReply.id = "submitreply";
         submitReply.textContent = "Submit"
-        inputcont.appendChild(submitReply);
+        submitreplybtn.appendChild(submitReply);
         submitReply.onclick = function () {
-            let replyUser = document.createElement("div")
-            replyUser.id = "userid";
-        
-            let replyImg = document.createElement("img");
-            replyImg.src = "carousel-hamster.jpg";
-            replyImg.id = "userphoto";
-            let replyUsername = document.querySelector(".user-name").value;
-            replyUser.textContent = replyUsername;
-            replyUser.appendChild(replyImg)
-            inputcont.parentNode.insertBefore(replyUser, inputcont);
-        
-            let userComment = document.querySelector(".user-comment").value;
-            let replyComment = document.createElement("div");
-            replyComment.id = "commentid";
-            replyComment.innerHTML = `<a>Replying to ${userName}</a><p>${userComment}</p>`
-            inputcont.parentNode.insertBefore(replyComment, inputcont);
-        }
+            let userComment = document.getElementById("usercomment").value;
+            let replyUserName = document.getElementById("username").value;
+
+            if (userName === "" || userComment === "") {
+                alert("Please fill in both your name and comment")
+            }  else {
+            // inhoud comment plaatsen
+            let newComment = document.createElement("div")
+            newComment.id = "commentid";
+            newComment.innerHTML = `<a style="font-size:0.9rem" href="#commentid">Replying to ${userName}</a><br><br>${userComment}`
+            document.body.appendChild(newComment)
+
+            // username en image
+            let newUser = document.createElement("div")
+            newUser.id = "userid";
+            newUser.textContent = replyUserName;
+            document.body.appendChild(newUser);
+
+            let img = document.createElement("img");
+            img.src = "carousel-hamster.jpg";
+            img.id = "userphoto";
+            newUser.appendChild(img);
+
+            // reply button
+            let replyButton = document.createElement("button");
+            replyButton.id = "replybutton"
+            replyButton.textContent = "Reply";
+            newComment.appendChild(replyButton);
+        }}
     }
-} 
+    }
+
+    // if (replyText.textContent.includes('Replying to')) { gebruiken voor submitreply functie?
+    //     // newComment.setAttribute('style', 'white-space: pre-line;');
+    //     // newComment.textContent = `Replying to ${userName} \r\n \r\n`;
+    //     // newComment.textContent += userComment;
+    //     newComment.innerHTML = `<a style="font-size:0.9rem" href="#commentid">Replying to ${userName}</a><br><br>${userComment}`
+    //     newComment.appendChild(replyButton);
+    // }
+
+    return false;
+}
+

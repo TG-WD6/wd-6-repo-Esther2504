@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="comments2.css">
+<style>body {
+    background-color: #90ED90;
+}
+
+#form {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+#form-container {
+    width: 550px;
+    height: 200px;
+    background-color: lightgray;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+#usercomment {
+    width: 100%;
+    height: 60%;
+}
+
+#user-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+}
+
+#commentid {
+    position: absolute;
+    width: 350px;
+    height: 200px;
+    background-color: white;
+    left: 15%;
+    margin-top: 10px;
+    box-sizing: border-box;
+    padding: 2%;
+    border-radius: 0 1rem 1rem 0;
+}
+
+#userid {
+    position: relative;
+    width: 15%;
+    height: 200px;
+    background-color: blanchedalmond;
+    box-sizing: border-box;
+    display: flex;
+    padding: 20px;
+    flex-direction: column-reverse;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 1rem 0 0 1rem;
+}
+
+#userphoto {
+    width: 70%;
+    border-radius: 0.5rem;
+    position: absolute;
+top: 10%;
+left: 15%;
+}
+
+#replybutton {
+    display: flex;
+    align-self: flex-end;
+    position: absolute;
+    top: 80%;
+    left: 80%;
+}
+
+#replyText {
+position: absolute;
+left: 3%;
+top: 0;
+}
+
+#removeText {
+position: absolute;
+left: 40%;
+top: 0;
+cursor: pointer;
+}
+
+#removeText:hover {
+    font-weight: bold;
+}
+</style>
+</head>
+<body>
+    <div id="form-container">
+    <div id="form">
+        <p id="replyText"></p>
+        <p id="removeText"></p>
+        <textarea name="usercomment" id="usercomment"></textarea>
+        <div id="user-container">
+            <input type="text" name="username" id="username" required></input>
+            <input type="submit" onclick="return addComment()" id="button"></input>
+    </div>
+</div>
+
+</div>
+<script>
+    function addComment() {
+    let userComment = document.getElementById("usercomment").value;
+    let userName = document.getElementById("username").value;
+
+    // inhoud comment plaatsen
+    let newComment = document.createElement("div")
+    newComment.id = "commentid";
+    newComment.textContent = userComment;
+    document.body.appendChild(newComment)
+
+    // username en image
+    let newUser = document.createElement("div")
+    newUser.id = "userid";
+    newUser.textContent = userName;
+    document.body.appendChild(newUser);
+
+    let img = document.createElement("img");
+    img.src = "carousel-hamster.jpg";
+    img.id = "userphoto";
+    newUser.appendChild(img);
+
+    // reply button
+    let replyButton = document.createElement("button");
+    replyButton.id = "replybutton"
+    replyButton.textContent = "Reply";
+    newComment.appendChild(replyButton);
+
+    // reply function
+    replyButton.onclick = function () {
+        let replyText = document.querySelector("#replyText");
+        
+        replyText.textContent = "Replying to " + userName;
+
+        let removeText = document.querySelector("#removeText");
+        removeText.textContent = "X" ;
+
+        removeText.addEventListener("click", function(){
+            replyText.textContent = "";
+            removeText.textContent = "";
+          });
+
+
+        }
+   
+        if (replyText.textContent.includes('Replying to')) { 
+            newComment.innerHTML = `<a style="font-size:0.9rem" href="#commentid">Replying to ${userName}</a><br><br>${userComment}`
+            newUser.textContent = userName;
+            newComment.appendChild(replyButton);
+        }
+
+    return false;
+}
+
+</script>
+
+</body>
+</html>

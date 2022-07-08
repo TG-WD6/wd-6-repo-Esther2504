@@ -1,25 +1,30 @@
+let inputValues = [];
+
+
 document.getElementById ("icon").addEventListener ("click", searchFunction, false);
 
 function searchFunction() {
 
+let input = document.getElementById("searchinput").value;
+inputValues.push(input);
+localStorage.setItem("suggestion",JSON.stringify(inputValues));
+// console.log(localStorage.getItem("suggestion"));
 
-// let searchData = document.getElementById("searchinput").value
-
-// localStorage.setItem("test", searchData)
-
-var input = document.getElementById("searchinput").value;
-localStorage.setItem("search", input);
-var storedValue = localStorage.getItem("search");
-
-
-
-// let suggestBox = document.getElementById("suggestionsbox");
-
-// suggestBox.innerText = storedValue;
-
-// let icon = document.getElementById("icon")
-// icon.addEventListener("click", name => {
-//     text.textContent = name.target.value
-//     })
 }
+// var storedValue = localStorage.getItem("search");
 
+// document.getElementById("searchinput").addEventListener("change", suggestItems());
+
+function suggestItems() {
+    let input = document.getElementById("searchinput").value;
+    inputValues.push(input);
+    localStorage.setItem("suggestion",JSON.stringify(inputValues));
+    let suggestBox = document.getElementById("suggestionsbox");
+
+    for (i=0; i<inputValues.length; i++) {
+        console.log(inputValues[i]);
+        suggestBox.textContent += inputValues[i];
+    
+     }
+
+}

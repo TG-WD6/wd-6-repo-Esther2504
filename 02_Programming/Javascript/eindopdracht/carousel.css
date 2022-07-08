@@ -4,6 +4,29 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #FBEAEB;
+    margin: 0;
+}
+nav {
+    width: 100%;
+    background-color: #2F3C7E;
+    height: 3rem;
+    text-align: center;
+    line-height: 3rem;
+    margin-bottom: 1%;
+}
+nav a {
+margin: 3%;
+font-size: 1rem;
+text-decoration: none;
+color: white;
+}
+
+ul {
+    margin: 0;
+}
+
 .carousel-container {
     width: 400px;
     overflow: hidden;
@@ -27,18 +50,19 @@
     height: 400px;
     width: 50px;
     background-color: rgb(16, 15, 15, 0.1);
-    position: absolute; 
-    top: 273px;
-    cursor: grab;
+    position: relative;
+    top: 0;
+    cursor: pointer;
     border-style: none;
 }
 
 .left-arrow {
-    border-radius: 0.6em 0 0 0.6em;
+    left: -25rem;
+    border-radius: 0.5em 0 0 0.5em;
 }
 
 .right-arrow {
-    left: 350px;
+    left: -6.2rem;
     border-radius: 0 0.6em 0.6em 0;
 }
 
@@ -55,4 +79,9 @@ line-height: 340px;
 
 button img {
     width: 30px;
+}
+
+.button-slides {
+    display: flex;
+    justify-content: center;
 }

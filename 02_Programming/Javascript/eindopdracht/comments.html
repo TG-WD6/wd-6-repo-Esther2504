@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="comments.js" defer></script>
-<link rel="stylesheet" href="comments.css">
+    <title>Comments</title>
+    <link rel="stylesheet" href="comments.css">
+    <script src="comments.js"></script>
 </head>
-
 <body>
-<div class="parent">
-    <div class="input-container">
-
-        <textarea class="user-comment"></textarea>
-
-        <div class="submit-container">
-            <input type="text" required class="user-name">
-            <!-- <input type="file" class="user-image" accept="image/*"> -->
-            <button id="submitButton" onclick="submitComment()">Submit</button>
-        </div>
-  
+    <nav>
+        <ul>
+            <a href="./js_eindopdracht.html">Clock</a>
+            <a href="./json.html">JSON Cards</a>
+            <a href="./carousel.html">Carousel</a>
+            <a href="./comments.html">Comments</a>
+            <a href="./searchbar.html">Search</a>
+        </ul>
+    </nav>
+    <div id="form-container">
+    <div id="form">
+        <p id="replyText"></p>
+        <p id="removeText"></p>
+        <textarea name="usercomment" id="usercomment"></textarea>
+        <div id="user-container">
+            <input type="text" name="username" id="username" required></input>
+            <input type="submit" onclick="return addComment()" id="button"></input>
+            <div id="submitreplybtn"></div>
     </div>
-
 </div>
 
+</div>
 </body>
-
 </html>

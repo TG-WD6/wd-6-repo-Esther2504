@@ -6,27 +6,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search</title>
     <style>
-        .icon {
+        body {
+    background-color: #FBEAEB;
+    margin: 0;
+}
+nav {
+    width: 100%;
+    background-color: #2F3C7E;
+    height: 3rem;
+    text-align: center;
+    line-height: 3rem;
+    margin-bottom: 1%;
+}
+nav a {
+margin: 3%;
+font-size: 1rem;
+text-decoration: none;
+color: white;
+}
+
+ul {
+    margin: 0;
+}
+        #icon {
             width: 0.7rem;
-            position: absolute;
-            top: 2.5%;
-            left: 14%;
+            position: relative;
+            top: -1.2rem;
+            left: 11rem;
+            cursor: pointer;
         }
 
         input {
             border-radius: 0.4rem;
             width: 11.5rem;
         }
+
+        .container {
+            margin: auto;
+            width: 11rem;
+        }
+
+        #suggestionsbox {
+            height: auto;
+        }
     </style>
     <script src="searchbar.js" defer></script>
 </head>
 <body>
-    <input type="text" id="searchinput">
+    <nav>
+        <ul>
+            <a href="./js_eindopdracht.html">Clock</a>
+            <a href="./json.html">JSON Cards</a>
+            <a href="./carousel.html">Carousel</a>
+            <a href="./comments.html">Comments</a>
+            <a href="./searchbar.html">Search</a>
+        </ul>
+    </nav>
+    <div class="container">
+    <input type="text" id="searchinput" onchange="suggestItems()">
     <div id="suggestionsbox">
         
       </div>
     <img id="icon" src="searchicon.svg">
-
+</div>
 
 </body>
 </html>
