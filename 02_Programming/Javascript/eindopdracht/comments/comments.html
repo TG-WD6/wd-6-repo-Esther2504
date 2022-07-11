@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comments</title>
+    <link rel="stylesheet" href="comments.css">
+    <script src="comments.js"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <a href="../js_eindopdracht.html">Clock</a>
+            <a href="../json-cards/json.html">JSON Cards</a>
+            <a href="../carousel/carousel.html">Carousel</a>
+            <a href="../comments/comments.html">Comments</a>
+            <a href="../search/searchbar.html">Search</a>
+        </ul>
+    </nav>
+    <div id="form__container">
+    <div id="form">
+        <p id="form__reply"></p>
+        <p id="form__removereply"></p>
+        <textarea id="form__comment"></textarea>
+        <div id="form__user__container">
+            <input type="text" id="form__username"></input>
+            <input type="submit" onclick="return addComment()" id="form__submit__button"></input>
+            <div id="form__reply__button"></div>
+    </div>
+</div>
+
+</div>
+</body>
+</html>
