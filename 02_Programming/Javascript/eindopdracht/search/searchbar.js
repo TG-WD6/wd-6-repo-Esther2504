@@ -1,8 +1,12 @@
 let inputValues = [];
 
-function saveData(){
-    let searchInput = document.querySelector("#searchbar__input").value;
+let searchInput = document.querySelector("#searchbar__input");
+let inputContainer = document.querySelector(".searchbar__input__container");
+let suggestionBox = document.querySelector("#searchbar__suggestions")
 
+function saveData(){
+
+    let searchInput = document.querySelector("#searchbar__input").value;
     if (localStorage.getItem('data') == null) {
         localStorage.setItem('data', '[]');
     }
@@ -11,38 +15,31 @@ function saveData(){
     savedData.push(searchInput);
 
     localStorage.setItem('data', JSON.stringify(savedData))
-
-// localStorage.setItem("suggestion", searchInput);
-
-// let sug = localStorage.getItem("suggestion")
-
-// let sug2 = document.createElement("p");
-// sug2.textContent = sug;
-// document.body.appendChild(sug2)
 }
-/*
-document.getElementById("searchbar__icon").addEventListener ("click", searchFunction, false);
 
-function searchFunction() {
+searchInput.addEventListener('keyup', () => {
+    let savedData = JSON.parse(localStorage.getItem('data'));
+let results = [];
+let input = searchInput.value;
+if (input.length) {
+    results = savedData.filter((item) => {
+return item.toLowerCase().includes(input.toLowerCase())
+    })
+}
 
-inputValues.push(searchInput);
-localStorage.setItem("suggestion",JSON.stringify(inputValues)); */
-// console.log(localStorage.getItem("suggestion"));
+renderResults(results)
+})
 
 
-// var storedValue = localStorage.getItem("search");
+function renderResults(results) {
+    if (!results.length) {
+        return inputContainer.classList.remove('show');
+    }
 
-// document.getElementById("searchinput").addEventListener("change", suggestItems());
+    let content = results.map((item) => {
+        return `<li>${item}</li>`
+    }).join('')
 
-/* function suggestItems() {
-    inputValues.push(searchInput);
-    localStorage.setItem("suggestion",JSON.stringify(inputValues));
-    let suggestBox = document.getElementById("searchbar__suggestions");
-
-    for (i=0; i<inputValues.length; i++) {
-        console.log(inputValues[i]);
-        suggestBox.textContent += inputValues[i];
-    
-     }
-
-} */
+    inputContainer.classList.add('show');
+    suggestionBox.innerHTML = `<ul>${content}</ul>`
+}
