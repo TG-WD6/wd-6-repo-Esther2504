@@ -5,51 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search</title>
-    <style>
-        body {
-    background-color: #FBEAEB;
-    margin: 0;
-}
-nav {
-    width: 100%;
-    background-color: #2F3C7E;
-    height: 3rem;
-    text-align: center;
-    line-height: 3rem;
-    margin-bottom: 1%;
-}
-nav a {
-margin: 3%;
-font-size: 1rem;
-text-decoration: none;
-color: white;
-}
-
-ul {
-    margin: 0;
-}
-        #icon {
-            width: 0.7rem;
-            position: relative;
-            top: -1.2rem;
-            left: 11rem;
-            cursor: pointer;
-        }
-
-        input {
-            border-radius: 0.4rem;
-            width: 11.5rem;
-        }
-
-        .container {
-            margin: auto;
-            width: 11rem;
-        }
-
-        #suggestionsbox {
-            height: auto;
-        }
-    </style>
+        <link rel="stylesheet" href="searchbar.css">
     <script src="searchbar.js" defer></script>
 </head>
 <body>
@@ -62,13 +18,19 @@ ul {
             <a href="../search/searchbar.html">Search</a>
         </ul>
     </nav>
-    <div class="container">
-    <input type="text" id="searchinput" onchange="suggestItems()">
-    <div id="suggestionsbox">
-        
+    <div class="searchbar__container show">
+        <div class="searchbar__input__container">
+    <input name="searchbar" type="text" id="searchbar__input">
+    <div id="searchbar__suggestions">
+        <ul>
+            <li>Test</li>
+            <li>Test</li>
+            <li>Test</li>
+        </ul>
       </div>
-    <img id="icon" src="searchicon.svg">
+   <img id="searchbar__icon" src="searchicon.svg" onclick="saveData()">
 </div>
+    </div>
 
 </body>
 </html>
