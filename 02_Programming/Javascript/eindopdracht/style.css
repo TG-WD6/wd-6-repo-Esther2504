@@ -1,3 +1,4 @@
+/* Algemene styling */
 body {
     background-color: #FBEAEB;
     margin: 0;
@@ -20,60 +21,58 @@ ul {
     margin-top: 0;
 }
 
-.clock {
-    width: 200px;
-    height: 200px;
+/* Styling clock */
+#clock {
+    width: 12.5rem;
+    height: 12.5rem;
     background-color: black;
     border-radius: 90%;
     position: relative;
 margin: 1rem auto;
 }
 
-.clock__minutes {
-    height: 70px;
-    width: 5px;
-    background-color: white;
-    position: absolute;
-    top: 30px;
-    right: 100px;
-    transform-origin: center bottom;
-    /* animation: clockpointer 3600s steps(60, end) infinite; */
-    /* animation: clockpointer; */
-}
-
-.clock__hours {
-    height: 50px;
-    width: 5px;
-    background-color: white;
-    top: 50px;
-    right: 100px;
-    position: absolute;
-    transform-origin: center bottom;
-    /* animation: clockpointer 43200s steps(60, end) infinite; */
-}
-
-.clock__seconds {
-    height: 70px;
-    width: 4px;
+#clock__seconds {
+    height: 4.38rem;
+    width: 0.25rem;
     background-color: red;
     position: absolute;
-    top: 30px;
-    right: 100px;
-    /* animation: clockpointer 60s steps(60, end) infinite; */
+    top: 1.88rem;
+    right: 6.27rem;
     transform-origin: center bottom;
     animation-iteration-count: infinite;
 }
 
-@keyframes clockpointer {
-    from {transform: rotate(0deg);}
-    to {transform: rotate(360deg)}
+#clock__minutes {
+    height: 4.38rem;
+    width: 0.35rem;
+    background-color: white;
+    position: absolute;
+    top: 1.88rem;
+    right: 6.27rem;
+    transform-origin: center bottom;
+}
+
+#clock__hours {
+    height: 3.13rem;
+    width: 0.35rem;
+    background-color: white;
+    top: 3.2rem;
+    right: 6.27rem;
+    position: absolute;
+    transform-origin: center bottom;
 }
 
 #clock__digital {
     width: 4rem;
     height: 1rem;
-    border: 1px solid black;
+    border: 0.3rem solid black;
     margin: auto;
     text-align: center;
+    color: white;
+    background-color: black;
 }
 
+@keyframes clockpointer {
+    from {transform: rotate(0deg)}
+    to {transform: rotate(360deg)}
+}
