@@ -1,6 +1,6 @@
-// await wacht tot de aanvraag compleet is
+// Fetching JSON data
 
-const getData = async () => (await fetch('./allcountries.json')).json();
+const getData = async () => (await fetch('https://raw.githubusercontent.com/mledoze/countries/master/countries.json')).json();
 
 getData()
   .then(data => {

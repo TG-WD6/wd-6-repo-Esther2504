@@ -38,8 +38,8 @@ ul {
     width: 0.25rem;
     background-color: red;
     position: absolute;
-    top: 2rem;
-    right: 6.27rem;
+    top: 2.1rem;
+    right: 50%;
     transform-origin: center bottom;
     animation-iteration-count: infinite;
 }
@@ -49,19 +49,30 @@ ul {
     width: 0.35rem;
     background-color: white;
     position: absolute;
-    top: 2rem;
-    right: 6.27rem;
+    top: 2.1rem;
+    right: 50%;
     transform-origin: center bottom;
 }
 
 #clock__hours {
-    height: 3.13rem;
+    height: 3rem;
     width: 0.35rem;
     background-color: white;
-    top: 3.32rem;
-    right: 6.27rem;
+    top: 3.37rem;
+    right: 50%;
     position: absolute;
     transform-origin: center bottom;
+}
+
+#clock__center {
+    height: 0.9rem;
+    width: 0.9rem;
+    background-color: white;
+    top: 6rem;
+    right: 48%;
+    position: absolute;
+    transform-origin: center bottom;
+    border-radius: 2rem;
 }
 
 #clock__digital {
