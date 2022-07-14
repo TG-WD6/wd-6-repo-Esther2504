@@ -1,7 +1,9 @@
+/* Algemene styling */
 body {
     background-color: #FBEAEB;
     margin: 0;
 }
+
 nav {
     width: 100%;
     background-color: #2F3C7E;
@@ -12,42 +14,79 @@ nav {
 }
 
 nav a {
-margin: 3%;
-font-size: 1rem;
-text-decoration: none;
-color: white;
+    margin: 3%;
+    font-size: 1rem;
+    text-decoration: none;
+    color: white;
 }
 
 ul {
     margin: 0;
 }
 
-#infocards {
-    width: 200px;
-    height: 200px;
-    background-color: rgb(52,71,125);
+/* Filters styling */
+#filter__container {
+    display: flex;
+    width: 18.75rem;
+    margin: 0 auto;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+#filter__amount {
+    border: 1px solid black;
+    width: 3.125rem;
+    text-align: center;
+    background-color: white;
+}
+
+/* Cards containers styling */
+#cards__container {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+#cards__back {
+    width: 25.625rem;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+#cards__front {
+    width: 25.625rem;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 0;
+}
+
+/* Styling generated cards */
+#cards__backside {
+    width: 12.5rem;
+    height: 12.5rem;
+    background-color: rgb(52, 71, 125);
     border-radius: 0.9rem;
     text-align: center;
-    border: 1px solid black;
+    border: 0.07rem solid black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
     color: white;
+    white-space: pre-line;
 }
 
-p {
-    margin: 0.5em;
-}
-
-#frontcard {
-    width: 200px;
-    height: 200px;
+#cards__frontside {
+    width: 12.5rem;
+    height: 12.5rem;
     background-image: url("globebackground.jpg");
-    background-size: 200px;
+    background-size: 12.5rem;
     border-radius: 0.9rem;
     text-align: center;
-    border: 1px solid black;
+    border: 0.07rem solid black;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -55,51 +94,11 @@ p {
     font-size: 1.5em;
     font-weight: bold;
     color: white;
-    text-shadow: 2px 2px 8px black;
+    text-shadow: 0.13rem 0.13rem 0.5rem black;
     transition: all 0.2s ease;
     backface-visibility: hidden;
 }
 
-#frontcard:hover {
+#cards__frontside:hover {
     opacity: 0;
-    /* transform: rotateY(180deg); */
-}
-
-.container {
-    position: relative;
-    overflow: hidden;
-    /* margin: 0 auto; */
-    display: flex;
-    justify-content: center;
-}
-
-#cards {
-    width: 410px;
-    display: flex;
-    flex-wrap: wrap;
-    overflow: hidden;
-}
-
-#cardnames {
-    width: 410px;
-    display: flex;
-    flex-wrap: wrap;
-    position: absolute;
-    top: 0;
-}
-
-.filter-container {
-    display: flex;
-    width: 300px;
-    margin: 0 auto;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-}
-
-
-#amount {
-    border: 1px solid black;
-    width: 50px;
-    text-align: center;
-    background-color: white;
 }

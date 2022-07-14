@@ -13,17 +13,18 @@
 <body>
     <nav>
         <ul>
-            <a href="../js_eindopdracht.html">Clock</a>
+            <a href="../clock/clock.html">Clock</a>
             <a href="../json-cards/json.html">JSON Cards</a>
             <a href="../carousel/carousel.html">Carousel</a>
             <a href="../comments/comments.html">Comments</a>
             <a href="../search/searchbar.html">Search</a>
         </ul>
     </nav>
-    <div class="filter-container">
-        <button id="clear">Clear</button>
-        <div id="amount">250</div>
-        <select id="continents">
+
+    <div id="filter__container">
+        <button id="filter__clear">Clear</button>
+        <div id="filter__amount">250</div>
+        <select id="filter__options">
             <option value="none">...</option>
             <option value="Africa">Africa</option>
             <option value="Americas">Americas</option>
@@ -32,11 +33,11 @@
             <option value="Europe">Europe</option>
             <option value="Oceania">Oceania</option>
         </select>
-        <button id="generate">Generate</button>
+        <button id="filter__generate">Generate</button>
     </div>
-        <div class="container">
-            <div id="cards"></div>
-            <div id="cardnames"></div>
+        <div id="cards__container">
+            <div id="cards__front"></div>
+            <div id="cards__back"></div>
         </div>
 </body>
 

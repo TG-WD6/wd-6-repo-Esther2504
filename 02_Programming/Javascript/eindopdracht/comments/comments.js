@@ -2,6 +2,7 @@ function addComment() {
     let userComment = document.querySelector("#form__comment").value;
     let userName = document.querySelector("#form__username").value;
     let commentForm = document.querySelector("#form__container");
+    let counter = 0;
 
     // Als de velden niet zijn ingevuld, wordt de functie niet uitgevoerd
     if (userName === "" || userComment === "") {
@@ -15,7 +16,8 @@ function addComment() {
 
         // Aanmaken comment div
         let newComment = document.createElement("div");
-        newComment.id = "form__comment__text";
+        newComment.id = "form__comment__text"  + counter++;
+        newComment.className = "form__comment__text";
         newComment.textContent = userComment;
         commentContainer.appendChild(newComment);
 
@@ -25,10 +27,10 @@ function addComment() {
         newUser.textContent = userName;
         commentContainer.appendChild(newUser);
 
-        let img = document.createElement("img");
-        img.src = "../carousel/carousel-hamster.jpg";
-        img.id = "form__user__photo";
-        newUser.appendChild(img);
+        let userImg = document.createElement("img");
+        userImg.src = "../carousel/carousel-hamster.jpg";
+        userImg.id = "form__user__photo";
+        newUser.appendChild(userImg);
 
         // Aanmaken reply button
         let replyButton = document.createElement("button");
@@ -74,11 +76,12 @@ function addComment() {
                     commentForm.parentNode.insertBefore(commentContainer, commentForm);
 
                     // Aanmaken comment div
-                    let newComment = document.createElement("div")
-                    newComment.id = "form__comment__text";
-                    newComment.innerHTML = `<a style="font-size:0.9rem" href="#form__comment__text">Replying to ${userName}</a><br><br>${userComment}`
+                    let newReplyComment = document.createElement("div")
+                    newReplyComment.id = "form__comment__text" + counter++;
+                    newReplyComment.className = "form__comment__text";
+                    newReplyComment.innerHTML = `<a style="font-size:0.9rem" href="#${newComment.id}">Replying to ${userName}</a><br><br>${userComment}`
 
-                    commentContainer.appendChild(newComment);
+                    commentContainer.appendChild(newReplyComment);
 
                     // Aanmaken username en img div
                     let newUser = document.createElement("div")
@@ -86,16 +89,16 @@ function addComment() {
                     newUser.textContent = replyUserName;
                     commentContainer.appendChild(newUser);
 
-                    let img = document.createElement("img");
-                    img.src = "../carousel/carousel-hamster.jpg";
-                    img.id = "form__user__photo";
-                    newUser.appendChild(img);
+                    let userImg = document.createElement("img");
+                    userImg.src = "../carousel/carousel-hamster.jpg";
+                    userImg.id = "form__user__photo";
+                    newUser.appendChild(userImg);
 
                     // Aanmaken reply button
                     let replyButton = document.createElement("button");
                     replyButton.id = "form__reply__btn";
                     replyButton.textContent = "Reply";
-                    newComment.appendChild(replyButton);
+                    newReplyComment.appendChild(replyButton);
 
                     // Functie om een reply te maken
                     replyButton.onclick = function () {
@@ -132,8 +135,9 @@ function addComment() {
 
                             // Aanmaken comment div
                             let newComment = document.createElement("div")
-                            newComment.id = "form__comment__text";
-                            newComment.innerHTML = `<a style="font-size:0.9rem" href="#form__comment__text">Replying to ${replyUserName}</a><br><br>${userComment}`
+                            newComment.id = "form__comment__text" + counter++;
+                            newComment.className = "form__comment__text";
+                            newComment.innerHTML = `<a style="font-size:0.9rem" href="#${newReplyComment.id}">Replying to ${replyUserName}</a><br><br>${userComment}`
                             commentContainer.appendChild(newComment);
 
                             // Aanmaken username en img div
@@ -142,10 +146,10 @@ function addComment() {
                             newUser.textContent = replyReplyUserName;
                             commentContainer.appendChild(newUser);
 
-                            let img = document.createElement("img");
-                            img.src = "../carousel/carousel-hamster.jpg";
-                            img.id = "form__user__photo";
-                            newUser.appendChild(img);
+                            let userImg = document.createElement("img");
+                            userImg.src = "../carousel/carousel-hamster.jpg";
+                            userImg.id = "form__user__photo";
+                            newUser.appendChild(userImg);
 
                             // Aanmaken reply button
                             let replyButton = document.createElement("button");

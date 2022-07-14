@@ -3,6 +3,7 @@ body {
     background-color: #FBEAEB;
     margin: 0;
 }
+
 nav {
     width: 100%;
     background-color: #2F3C7E;
@@ -10,11 +11,12 @@ nav {
     text-align: center;
     line-height: 3rem;
 }
+
 nav a {
-margin: 3%;
-font-size: 1rem;
-text-decoration: none;
-color: white;
+    margin: 3%;
+    font-size: 1rem;
+    text-decoration: none;
+    color: white;
 }
 
 ul {
@@ -28,7 +30,7 @@ ul {
     background-color: black;
     border-radius: 90%;
     position: relative;
-margin: 1rem auto;
+    margin: 1rem auto;
 }
 
 #clock__seconds {
@@ -36,7 +38,7 @@ margin: 1rem auto;
     width: 0.25rem;
     background-color: red;
     position: absolute;
-    top: 1.88rem;
+    top: 2rem;
     right: 6.27rem;
     transform-origin: center bottom;
     animation-iteration-count: infinite;
@@ -47,7 +49,7 @@ margin: 1rem auto;
     width: 0.35rem;
     background-color: white;
     position: absolute;
-    top: 1.88rem;
+    top: 2rem;
     right: 6.27rem;
     transform-origin: center bottom;
 }
@@ -56,7 +58,7 @@ margin: 1rem auto;
     height: 3.13rem;
     width: 0.35rem;
     background-color: white;
-    top: 3.2rem;
+    top: 3.32rem;
     right: 6.27rem;
     position: absolute;
     transform-origin: center bottom;
@@ -73,6 +75,11 @@ margin: 1rem auto;
 }
 
 @keyframes clockpointer {
-    from {transform: rotate(0deg)}
-    to {transform: rotate(360deg)}
+    from {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(360deg)
+    }
 }

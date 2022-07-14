@@ -1,6 +1,6 @@
-setInterval(moveSeconds, 1000)
+setInterval(rotateSeconds, 1000);
 
-function moveSeconds() {
+function rotateSeconds() {
     let currentDate = new Date();
     let currentSecond = currentDate.getSeconds();
     let rotateSeconds = (currentSecond / 60) * 360;
@@ -8,9 +8,9 @@ function moveSeconds() {
     secondsPointer.style.transform = "rotate(" + rotateSeconds + "deg)";
 }
 
-setInterval(moveMinutes, 1000)
+setInterval(rotateMinutes, 1000);
 
-function moveMinutes() {
+function rotateMinutes() {
     let currentDate = new Date();
     let currentMinute = currentDate.getMinutes();
     let rotateMinutes = (currentMinute / 60) * 360;
@@ -18,15 +18,15 @@ function moveMinutes() {
     minutesPointer.style.transform = "rotate(" + rotateMinutes + "deg)";
 }
 
-setInterval(moveHours, 1000)
+setInterval(rotateHours, 1000);
 
-function moveHours() {
+function rotateHours() {
     let currentDate = new Date();
     let currentHour = currentDate.getHours();
     let currentMinute = currentDate.getMinutes();
     let rotateHour = ((currentHour + "." + currentMinute) / 12) * 360;
-    let hourPointer = document.querySelector("#clock__hours");
-    hourPointer.style.transform = "rotate(" + rotateHour + "deg)";
+    let hoursPointer = document.querySelector("#clock__hours");
+    hoursPointer.style.transform = "rotate(" + rotateHour + "deg)";
 }
 
 setInterval(Timer, 1000);

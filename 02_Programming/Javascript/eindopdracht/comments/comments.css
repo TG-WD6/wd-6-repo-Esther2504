@@ -67,7 +67,7 @@ ul {
 
 /* Styling comments */
 
-#form__comment__text {
+.form__comment__text {
     position: relative;
     width: 23rem;
     height: 13rem;
