@@ -1,0 +1,103 @@
+/* Algemene styling */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body {
+    background-color: #6f818e;
+    margin: 0;
+}
+
+nav {
+    width: 100%;
+    background-color: #263541;
+    height: 3rem;
+    text-align: center;
+    line-height: 3rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav a {
+    margin: 3%;
+    font-size: 0.9rem;
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline 0.15em rgba(255, 255, 255);
+}
+
+ul {
+    margin-top: 0;
+}
+
+/* Styling clock */
+#clock {
+    width: 12.5rem;
+    height: 12.5rem;
+    background-color: black;
+    border-radius: 90%;
+    position: relative;
+    margin: 1rem auto;
+}
+
+#clock__seconds {
+    height: 4.38rem;
+    width: 0.25rem;
+    background-color: red;
+    position: absolute;
+    top: 2.1rem;
+    right: 50%;
+    transform-origin: center bottom;
+    animation-iteration-count: infinite;
+}
+
+#clock__minutes {
+    height: 4.38rem;
+    width: 0.35rem;
+    background-color: white;
+    position: absolute;
+    top: 2.1rem;
+    right: 50%;
+    transform-origin: center bottom;
+}
+
+#clock__hours {
+    height: 3rem;
+    width: 0.35rem;
+    background-color: white;
+    top: 3.37rem;
+    right: 50%;
+    position: absolute;
+    transform-origin: center bottom;
+}
+
+#clock__center {
+    height: 0.9rem;
+    width: 0.9rem;
+    background-color: white;
+    top: 6rem;
+    right: 48%;
+    position: absolute;
+    transform-origin: center bottom;
+    border-radius: 2rem;
+}
+
+#clock__digital {
+    width: 4rem;
+    height: 1rem;
+    border: 0.3rem solid black;
+    margin: auto;
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+
+@keyframes clockpointer {
+    from {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(360deg)
+    }
+}

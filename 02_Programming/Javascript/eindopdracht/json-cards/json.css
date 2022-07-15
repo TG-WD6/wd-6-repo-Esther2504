@@ -1,0 +1,156 @@
+/* Algemene styling */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Open+Sans&display=swap');
+
+body {
+    background-color: #6f818e;
+    margin: 0;
+}
+
+nav {
+    width: 100%;
+    background-color: #263541;
+    height: 3rem;
+    text-align: center;
+    line-height: 3rem;
+    margin-bottom: 1%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav a {
+    margin: 3%;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    text-decoration: underline 0.15em rgb(255, 255, 255);
+}
+
+ul {
+    margin: 0;
+}
+
+button {
+    background-color: #263541;
+    color: white;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+button:hover {
+    animation: shake 1s ease;
+    animation-iteration-count: 1;
+}
+
+@keyframes shake
+{
+    10%  {
+        transform: translateX(0.4rem);
+    }    20%    {
+        transform: translateX(-0.4rem);
+    }    40%    {
+        transform: translateX(0.3rem);
+    }    60%    {
+        transform: translateX(-0.3rem);
+    }    80%    {
+        transform: translateX(0.3rem);
+    }    100%    {
+        transform: translateX(0);
+    }
+}
+
+select {
+    background-color: #263541;
+    color: white;
+    border-radius: 0.3rem;
+    border: 0.2rem solid black;
+}
+
+/* Filters styling */
+#filter__container {
+    display: flex;
+    width: 18.75rem;
+    margin: 0 auto;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+#filter__amount {
+    border: 0.2rem solid black;
+    width: 3.125rem;
+    text-align: center;
+    background-color: #263541;
+    color: white;
+    border-radius: 0.3rem;
+}
+
+/* Cards containers styling */
+#cards__container {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+#cards__back {
+    width: 26.625rem;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+#cards__front {
+    width: 26.625rem;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 0;
+}
+
+/* Styling generated cards */
+#cards__backside {
+    width: 12.5rem;
+    height: 12.5rem;
+    background-color: rgb(52, 71, 125);
+    background: url("globebackgroundbackside.jpg");
+    border-radius: 0.9rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    color: white;
+    white-space: pre-line;
+    border: 0.2rem solid #263541;
+    font-weight: 580;
+    text-shadow: 2px 0px 1px #000000;
+    font-size: 0.8em;
+    font-family: 'Merriweather', serif;
+}
+
+#cards__frontside {
+    width: 12.5rem;
+    height: 12.5rem;
+    background-image: url("globebackground.jpg");
+    background-size: 12.5rem;
+    border-radius: 0.9rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0.13rem 0.13rem 0.5rem black;
+    transition: all 0.2s ease;
+    backface-visibility: hidden;
+    border: 0.2rem solid #263541;
+    font-family: 'Merriweather', serif;
+}
+
+#cards__frontside:hover {
+    opacity: 0;
+}

@@ -1,0 +1,79 @@
+/* Algemene styling */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body {
+    background-color: #6f818e;
+    margin: 0;
+}
+
+nav {
+    width: 100%;
+    background-color: #263541;
+    height: 3rem;
+    text-align: center;
+    line-height: 3rem;
+    margin-bottom: 1%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav a {
+    margin: 3%;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    text-decoration: underline 0.15em rgba(255, 255, 255);
+}
+
+ul {
+    margin: 0;
+}
+
+/* Searchbar styling */
+.searchbar__container {
+    width: 13rem;
+    overflow: hidden;
+    margin: auto;
+}
+
+#searchbar__input__container {
+    width: 12rem;
+    background-color: white;
+    border: 0.1rem solid #263541;
+    border-radius: 0.4rem;
+    margin: auto;
+}
+
+#searchbar__icon {
+    width: 0.8rem;
+    position: absolute;
+    top: 4rem;
+    left: 45rem;
+    cursor: pointer;
+}
+
+#searchbar__input {
+    width: 98%;
+    border: none;
+    border-radius: 0.4rem;
+}
+
+#searchbar__input:focus-visible {
+    outline: none;
+}
+
+#searchbar__suggestions {
+    display: none;
+}
+
+/* Als de class .show aanwezig is, wordt de div met suggestions getoond */
+.show #searchbar__suggestions {
+    display: flex;
+    flex-direction: column;
+    white-space: pre;
+    font-size: 0.85rem;
+    color: rgb(85, 85, 85);
+    padding: 0.1rem 0.6rem 0.1rem 0.2rem;
+}

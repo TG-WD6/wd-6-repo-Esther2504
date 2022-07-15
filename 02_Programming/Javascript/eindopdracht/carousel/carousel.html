@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel</title>
+    <link rel="stylesheet" href="carousel.css">
+    <script src="carousel.js" defer></script>
+    <body>
+        <nav>
+                <a href="../clock/clock.html">Clock</a>
+                <a href="../json-cards/json.html">JSON Cards</a>
+                <a href="../carousel/carousel.html">Carousel</a>
+                <a href="../comments/comments.html">Comments</a>
+                <a href="../search/searchbar.html">Search</a>
+        </nav>
+        <div class="carousel__container">
+    <div class="carousel">
+    <div class="carousel__slider">
+        <img class="carousel__img" id="carousel__lastimage" src="carousel-squirrel.jpg">
+        <img class="carousel__img" src="carousel-rabbit.jpg">
+        <img class="carousel__img" src="carousel-hamster.jpg">
+        <img class="carousel__img" src="carousel-squirrel.jpg">
+        <img class="carousel__img" id="carousel__firstimage" src="carousel-rabbit.jpg">
+    </div> 
+</div>
+        <button class="carousel__leftarrow" onclick="slideLeft()"> <img src="left-arrow.svg"></button>
+        <button class="carousel__rightarrow" onclick="slideRight()"><img src="right-arrow.svg"></button>
+    </div>
+</body>
