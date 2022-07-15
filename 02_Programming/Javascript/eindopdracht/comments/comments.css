@@ -1,23 +1,30 @@
 /* Algemene styling */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 body {
-    background-color: #FBEAEB;
+    background-color: #6f818e;
     margin: 0;
 }
 
 nav {
     width: 100%;
-    background-color: #2F3C7E;
+    background-color: #263541;
     height: 3rem;
     text-align: center;
     line-height: 3rem;
     margin-bottom: 1%;
+    font-family: 'Open Sans', sans-serif;
 }
 
 nav a {
     margin: 3%;
-    font-size: 1rem;
+    font-size: 0.9rem;
     text-decoration: none;
-    color: white;
+    color: #FFFFFF;
+}
+
+nav a:hover {
+    text-decoration: underline 0.15em rgba(255, 255, 255);
 }
 
 ul {
@@ -37,13 +44,16 @@ ul {
 #form__container {
     width: 34rem;
     height: 13rem;
-    background-color: lightgray;
+    /* background-color: #D3D3D3; */
+    background-color: #adbac4;
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
     margin-top: 1%;
+    border: 0.2rem solid #263541;
+    margin: 1% auto;
 }
 
 #form__comment {
@@ -57,6 +67,9 @@ ul {
 
 #form__submit__button {
     margin-top: 1rem;
+    background-color: #263541;
+    color: white;
+    border-radius: 0.3rem;
 }
 
 #form__user__container {
@@ -66,39 +79,45 @@ ul {
 }
 
 /* Styling comments */
-
 .form__comment__text {
     position: relative;
-    width: 23rem;
+    width: 22.5rem;
     height: 13rem;
-    background-color: white;
-    left: 18%;
+    background-color: #FFFFFF;
+    left: 54%;
     margin-top: 1rem;
     box-sizing: border-box;
     padding: 2%;
     border-radius: 0 1rem 1rem 0;
+    border: 0.2rem solid #263541;
 }
 
 #form__user__name {
     position: relative;
-    width: 18%;
+    width: 11.6rem;
     height: 13rem;
-    background-color: blanchedalmond;
+    /* background-color: #FFEBCD; */
+    background-color: #adbac4;
     box-sizing: border-box;
     display: flex;
     padding: 1.25rem;
-    top: -105%;
+    top: -104.9%;
     flex-direction: column-reverse;
     text-align: center;
     margin-top: 0.62rem;
     border-radius: 1rem 0 0 1rem;
+    border-top: 0.2rem solid #263541;
+    border-bottom: 0.2rem solid #263541;
+    border-left: 0.2rem solid #263541;
+    left: 36%;
+    font-weight: 520;
 }
 
 #form__user__photo {
     width: 80%;
     border-radius: 0.5rem;
     position: absolute;
-    top: 10%;
+    top: 8%;
     left: 10%;
 }
 
@@ -108,6 +127,9 @@ ul {
     position: absolute;
     top: 80%;
     left: 80%;
+    background-color: #263541;
+    color: white;
+    border-radius: 0.3rem;
 }
 
 #form__reply {
@@ -127,14 +149,16 @@ ul {
 }
 
 #form__removereply:hover {
-    font-weight: bold;
+    font-weight: 700;
 }
 
 #form__submit__reply {
     position: absolute;
     z-index: 2;
     margin-top: 1rem;
-
+    background-color: #263541;
+    color: white;
+    border-radius: 0.3rem;
 }
 
 #form__comment__container {

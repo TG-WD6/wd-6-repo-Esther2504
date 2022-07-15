@@ -1,27 +1,71 @@
 /* Algemene styling */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Open+Sans&display=swap');
+
 body {
-    background-color: #FBEAEB;
+    background-color: #6f818e;
     margin: 0;
 }
 
 nav {
     width: 100%;
-    background-color: #2F3C7E;
+    background-color: #263541;
     height: 3rem;
     text-align: center;
     line-height: 3rem;
     margin-bottom: 1%;
+    font-family: 'Open Sans', sans-serif;
 }
 
 nav a {
     margin: 3%;
-    font-size: 1rem;
+    font-size: 0.9rem;
     text-decoration: none;
     color: white;
 }
 
+nav a:hover {
+    text-decoration: underline 0.15em rgb(255, 255, 255);
+}
+
 ul {
     margin: 0;
+}
+
+button {
+    background-color: #263541;
+    color: white;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+button:hover {
+    animation: shake 1s ease;
+    animation-iteration-count: 1;
+}
+
+@keyframes shake
+{
+    10%  {
+        transform: translateX(0.4rem);
+    }    20%    {
+        transform: translateX(-0.4rem);
+    }    40%    {
+        transform: translateX(0.3rem);
+    }    60%    {
+        transform: translateX(-0.3rem);
+    }    80%    {
+        transform: translateX(0.3rem);
+    }    100%    {
+        transform: translateX(0);
+    }
+}
+
+select {
+    background-color: #263541;
+    color: white;
+    border-radius: 0.3rem;
+    border: 0.2rem solid black;
 }
 
 /* Filters styling */
@@ -34,10 +78,12 @@ ul {
 }
 
 #filter__amount {
-    border: 1px solid black;
+    border: 0.2rem solid black;
     width: 3.125rem;
     text-align: center;
-    background-color: white;
+    background-color: #263541;
+    color: white;
+    border-radius: 0.3rem;
 }
 
 /* Cards containers styling */
@@ -49,14 +95,14 @@ ul {
 }
 
 #cards__back {
-    width: 25.625rem;
+    width: 26.625rem;
     display: flex;
     flex-wrap: wrap;
     overflow: hidden;
 }
 
 #cards__front {
-    width: 25.625rem;
+    width: 26.625rem;
     display: flex;
     flex-wrap: wrap;
     position: absolute;
@@ -68,15 +114,20 @@ ul {
     width: 12.5rem;
     height: 12.5rem;
     background-color: rgb(52, 71, 125);
+    background: url("globebackgroundbackside.jpg");
     border-radius: 0.9rem;
     text-align: center;
-    border: 0.07rem solid black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
     color: white;
     white-space: pre-line;
+    border: 0.2rem solid #263541;
+    font-weight: 580;
+    text-shadow: 2px 0px 1px #000000;
+    font-size: 0.8em;
+    font-family: 'Merriweather', serif;
 }
 
 #cards__frontside {
@@ -86,17 +137,18 @@ ul {
     background-size: 12.5rem;
     border-radius: 0.9rem;
     text-align: center;
-    border: 0.07rem solid black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-weight: bold;
     color: white;
     text-shadow: 0.13rem 0.13rem 0.5rem black;
     transition: all 0.2s ease;
     backface-visibility: hidden;
+    border: 0.2rem solid #263541;
+    font-family: 'Merriweather', serif;
 }
 
 #cards__frontside:hover {

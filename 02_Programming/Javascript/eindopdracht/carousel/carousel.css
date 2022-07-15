@@ -1,21 +1,31 @@
 /* Algemene styling */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 body {
-    background-color: #FBEAEB;
+    background-color: #6f818e;
     margin: 0;
+    overflow-x: hidden;
 }
+
 nav {
     width: 100%;
-    background-color: #2F3C7E;
+    background-color: #263541;
     height: 3rem;
     text-align: center;
     line-height: 3rem;
     margin-bottom: 1%;
+    font-family: 'Open Sans', sans-serif;
 }
+
 nav a {
 margin: 3%;
-font-size: 1rem;
+font-size: 0.9rem;
 text-decoration: none;
 color: white;
+}
+
+nav a:hover {
+    text-decoration: underline 0.15em rgba(255, 255, 255);
 }
 
 ul {
@@ -40,11 +50,19 @@ ul {
     width: 25rem;
 }
 
+.carousel__container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 4.2rem;
+}
+
 /* Button styling */
 .carousel__leftarrow, .carousel__rightarrow {
     height: 25rem;
     width: 3.125rem;
-    background-color: rgb(16, 15, 15, 0.1);
+    /* background-color: rgb(16, 15, 15, 0.1); */
+    background-color: rgb(38, 53, 65, 0.4);
     position: relative;
     top: 0;
     cursor: pointer;
@@ -62,12 +80,8 @@ ul {
 }
 
 .carousel__leftarrow:hover, .carousel__rightarrow:hover {
-    background-color: rgb(16, 15, 15, 0.5);
-}
-
-.carousel__container {
-    display: flex;
-    justify-content: center;
+    /* background-color: rgb(16, 15, 15, 0.5); */
+    background-color: rgb(38, 53, 65, 0.7);
 }
 
 button img {
